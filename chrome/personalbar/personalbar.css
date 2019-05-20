@@ -10,3 +10,8 @@
 #main-window[lwthemetextcolor=bright] #PlacesToolbar .bookmark-item[container] {
   list-style-image: url(./folder-dark.svg) !important;
 }
+
+/* remove space between bookmark folder and popup */
+#PlacesToolbar menupopup {
+  margin-top: -8px !important;
+}
