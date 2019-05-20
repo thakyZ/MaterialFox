@@ -314,6 +314,11 @@ menuitem[checked="true"] > .menu-iconic-left {
 	background: 0 !important;
 }
 
+/* remove space between toolbarbutton and panel */
+#downloadsPanel, #widget-overflow, #appMenu-popup, #customizationui-widget-panel {
+  margin-top: -3px !important;
+}
+
 /* windows-specific tweaks */
 @media (-moz-windows-compositor)
 {
