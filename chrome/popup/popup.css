@@ -338,7 +338,13 @@ menuitem[checked="true"] > .menu-iconic-left {
 	panel[type="arrow"]
 	{
 		/* must pad because overflow: visible doesn't work */
-		padding: 3px 3px 7px !important;
+		padding: 3px 10px 12px !important;
+	}
+
+	/* compensate padding */
+	panel[type="arrow"][side="top"],
+	panel[type="arrow"][side="bottom"] {
+		margin-right: -25px !important;
 	}
 	
 	.panel-arrowcontent
@@ -348,24 +354,11 @@ menuitem[checked="true"] > .menu-iconic-left {
 			0 0 3px rgba(0, 0, 0, .17),
 			0 4px 3px rgba(0, 0, 0, .1) !important;
 	}
-	
-	/* dark themes get a contrasty border */
-	.popup-internal-box:-moz-lwtheme-brighttext
-	{
-		box-shadow:
-		    0 0 0 .5px #000 inset,
-		    0 0 0 1.5px var(--arrowpanel-border-color) inset,
-		    0 0 6px rgba(0, 0, 0, .08),
-		    0 12px 12px rgba(0, 0, 0, .125) !important;
-	}
-	
+
+	.popup-internal-box:-moz-lwtheme-brighttext,
 	.panel-arrowcontent:-moz-lwtheme-brighttext
 	{
-		box-shadow:
-		    0 0 0 .5px #000 inset,
-		    0 0 0 1.5px var(--arrowpanel-border-color) inset,
-		    0 0 3px rgba(0, 0, 0, .17),
-		    0 4px 13px rgba(0, 0, 0, .1) !important;
+		box-shadow: 0px 3px 8px 0px #1d1d1d !important;
 	}
 	
 	/*
