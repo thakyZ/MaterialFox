@@ -187,6 +187,19 @@ menuseparator
 	list-style-image: url(checkbox-checked.svg) !important;
 }
 
+/* show custom checkbox */
+menuitem[type="checkbox"] > .menu-iconic-left > .menu-iconic-icon,
+menuitem[checked="true"] > .menu-iconic-left > .menu-iconic-icon,
+menuitem[type="radio"] > .menu-iconic-left > .menu-iconic-icon {
+	display: -moz-box !important;
+}
+
+/* hide native checkbox */
+menuitem[type="checkbox"] > .menu-iconic-left,
+menuitem[checked="true"] > .menu-iconic-left {
+	-moz-appearance: none !important;
+}
+
 /* unset fill-opacity for menus nested in buttons */
 .bookmark-item > menupopup
 {
