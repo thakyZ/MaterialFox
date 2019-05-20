@@ -121,6 +121,7 @@ menuseparator
 {
 	-moz-appearance: none !important;
 	list-style-image: url(menu-right-1x.svg) !important;
+	transform: scale(.7);
 }
 
 #context-navigation
