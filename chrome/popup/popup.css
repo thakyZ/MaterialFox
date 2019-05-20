@@ -8,6 +8,11 @@ panel[type="autocomplete-richlistbox"]
 	position: relative !important;
 }
 
+/* child popups should align vertically with the parent menu item */
+menupopup > menu > menupopup {
+  margin-top: -14px !important;
+}
+
 .popup-internal-box,
 .panel-arrowcontent,
 .autocomplete-richlistbox,
