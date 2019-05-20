@@ -1,3 +1,5 @@
+@import './contextMenuRemovals.css';
+
 menupopup,
 panel[type="autocomplete-richlistbox"]
 {
@@ -6,6 +8,11 @@ panel[type="autocomplete-richlistbox"]
 	border: 0 !important;
 	color: var(--arrowpanel-color) !important;
 	position: relative !important;
+}
+
+/* child popups should align vertically with the parent menu item */
+menupopup > menu > menupopup {
+  margin-top: -14px !important;
 }
 
 .popup-internal-box,
@@ -61,8 +68,12 @@ menuitem,
 .autocomplete-richlistitem
 {
 	padding: 0 24px 0 !important;
-	min-height: 28px !important;
+	min-height: var(--menu-item-height) !important;
 	border: 0 !important;
+}
+
+.subview-subheader, panelview .toolbarbutton-1, .subviewbutton, .widget-overflow-list .toolbarbutton-1 {
+  min-height: var(--menu-item-height) !important;
 }
 
 /* hover */
@@ -73,13 +84,13 @@ menuitem:not([disabled=true]):not([_moz-menuactive]):hover,
 	background-color: var(--arrowpanel-dimmed) !important;
 }
 
-/* selected/open */
+/* selected/open/hover, fallback to support devtools */
 menu[open],
 .autocomplete-richlistitem[selected],
 menuitem[_moz-menuactive]
 {
-	background-color: var(--autocomplete-popup-highlight-background) !important;
-	color: var(--autocomplete-popup-highlight-color) !important;
+	background-color: var(--arrowpanel-dimmed, var(--theme-arrowpanel-dimmed)) !important;
+  color: inherit !important;
 }
 
 menu[disabled=true],
@@ -121,6 +132,7 @@ menuseparator
 {
 	-moz-appearance: none !important;
 	list-style-image: url(menu-right-1x.svg) !important;
+	transform: scale(.7);
 }
 
 #context-navigation
@@ -175,6 +187,19 @@ menuseparator
 :not(menulist) > menupopup > menuitem:-moz-any([type=checkbox], [type=radio]):-moz-any([checked=true], [selected=true])
 {
 	list-style-image: url(checkbox-checked.svg) !important;
+}
+
+/* show custom checkbox */
+menuitem[type="checkbox"] > .menu-iconic-left > .menu-iconic-icon,
+menuitem[checked="true"] > .menu-iconic-left > .menu-iconic-icon,
+menuitem[type="radio"] > .menu-iconic-left > .menu-iconic-icon {
+	display: -moz-box !important;
+}
+
+/* hide native checkbox */
+menuitem[type="checkbox"] > .menu-iconic-left,
+menuitem[checked="true"] > .menu-iconic-left {
+	-moz-appearance: none !important;
 }
 
 /* unset fill-opacity for menus nested in buttons */
@@ -291,6 +316,11 @@ menuseparator
 	background: 0 !important;
 }
 
+/* remove space between toolbarbutton and panel */
+#downloadsPanel, #widget-overflow, #appMenu-popup, #customizationui-widget-panel {
+  margin-top: -3px !important;
+}
+
 /* windows-specific tweaks */
 @media (-moz-windows-compositor)
 {
@@ -315,7 +345,13 @@ menuseparator
 	panel[type="arrow"]
 	{
 		/* must pad because overflow: visible doesn't work */
-		padding: 3px 3px 7px !important;
+		padding: 3px 10px 12px !important;
+	}
+
+	/* compensate padding */
+	panel[type="arrow"][side="top"],
+	panel[type="arrow"][side="bottom"] {
+		margin-right: -25px !important;
 	}
 	
 	.panel-arrowcontent
@@ -325,24 +361,11 @@ menuseparator
 			0 0 3px rgba(0, 0, 0, .17),
 			0 4px 3px rgba(0, 0, 0, .1) !important;
 	}
-	
-	/* dark themes get a contrasty border */
-	.popup-internal-box:-moz-lwtheme-brighttext
-	{
-		box-shadow:
-		    0 0 0 .5px #000 inset,
-		    0 0 0 1.5px var(--arrowpanel-border-color) inset,
-		    0 0 6px rgba(0, 0, 0, .08),
-		    0 12px 12px rgba(0, 0, 0, .125) !important;
-	}
-	
+
+	.popup-internal-box:-moz-lwtheme-brighttext,
 	.panel-arrowcontent:-moz-lwtheme-brighttext
 	{
-		box-shadow:
-		    0 0 0 .5px #000 inset,
-		    0 0 0 1.5px var(--arrowpanel-border-color) inset,
-		    0 0 3px rgba(0, 0, 0, .17),
-		    0 4px 13px rgba(0, 0, 0, .1) !important;
+		box-shadow: 0px 3px 8px 0px #1d1d1d !important;
 	}
 	
 	/*
