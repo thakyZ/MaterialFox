@@ -66,8 +66,12 @@ menuitem,
 .autocomplete-richlistitem
 {
 	padding: 0 24px 0 !important;
-	min-height: 28px !important;
+	min-height: var(--menu-item-height) !important;
 	border: 0 !important;
+}
+
+.subview-subheader, panelview .toolbarbutton-1, .subviewbutton, .widget-overflow-list .toolbarbutton-1 {
+  min-height: var(--menu-item-height) !important;
 }
 
 /* hover */
@@ -78,13 +82,13 @@ menuitem:not([disabled=true]):not([_moz-menuactive]):hover,
 	background-color: var(--arrowpanel-dimmed) !important;
 }
 
-/* selected/open */
+/* selected/open/hover, fallback to support devtools */
 menu[open],
 .autocomplete-richlistitem[selected],
 menuitem[_moz-menuactive]
 {
-	background-color: var(--autocomplete-popup-highlight-background) !important;
-	color: var(--autocomplete-popup-highlight-color) !important;
+	background-color: var(--arrowpanel-dimmed, var(--theme-arrowpanel-dimmed)) !important;
+  color: inherit !important;
 }
 
 menu[disabled=true],

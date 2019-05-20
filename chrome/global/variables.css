@@ -113,6 +113,7 @@
 
 	--button-size: 32px; /* is this used? */
 	--icon-size: 24px; /* is this used? */
+	--menu-item-height: 28px;
 }
 
 #titlebar,
