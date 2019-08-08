@@ -365,7 +365,8 @@ menuitem[checked="true"] > .menu-iconic-left {
 	.popup-internal-box:-moz-lwtheme-brighttext,
 	.panel-arrowcontent:-moz-lwtheme-brighttext
 	{
-		box-shadow: 0px 3px 8px 0px #1d1d1d !important;
+		/* box-shadow: 0px 3px 8px 0px #1d1d1d !important; */
+		box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.73) !important;
 	}
 	
 	/*
