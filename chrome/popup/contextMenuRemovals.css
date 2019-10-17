@@ -19,6 +19,7 @@
 [id^=_a658a273-612e-489e-b4f1-5344e672f4f5_-menuitem-],
 [id^=support_lastpass_com-menuitem-],
 [id$=run-wave],
-#screenshots_mozilla_org-menuitem-_create-screenshot {
+#screenshots_mozilla_org-menuitem-_create-screenshot,
+#inspect-separator ~ menuseparator {
   display: none;
 }
