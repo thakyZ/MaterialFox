@@ -173,6 +173,10 @@
 	opacity: 0 !important;
 }
 
+#tracking-protection-icon-container {
+	border: none !important;
+}
+
 #identity-box.extensionPage > #identity-icon
 {
 	list-style-image: none !important;
@@ -242,7 +246,8 @@
 
 .urlbar-icon,
 #identity-box,
-#urlbar-display-box
+#urlbar-display-box,
+#tracking-protection-icon-container
 {
 	min-width: 32px !important;
 	height: 24px !important;
