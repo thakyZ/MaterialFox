@@ -123,6 +123,9 @@
 	--icon-size: 24px; /* is this used? */
 	
 	--downloads-item-height: 48px !important;
+
+	--item-height: 28px;
+	--popup-border-radius: 8px;
 	
 	--toolbar-non-lwt-bgcolor: var(--toolbar-bgcolor) !important;
 	--toolbar-non-lwt-textcolor: var(--toolbar-color) !important;
