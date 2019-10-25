@@ -315,6 +315,10 @@
 	list-style-image: url(search.svg) !important;
 }
 
+#tracking-protection-icon-container {
+	border: none !important;
+}
+
 #identity-box:-moz-any(
 .mixedActiveBlocked,
 .mixedDisplayContentLoadedActiveBlocked,
@@ -379,7 +383,8 @@
 }
 
 .urlbar-icon,
-#identity-box
+#identity-box,
+#tracking-protection-icon-container
 {
 	min-width: 32px !important;
 	height: 24px !important;
@@ -401,7 +406,8 @@
 }
 
 .urlbar-icon:hover:not([disabled]),
-#identity-box:hover:not(.no-hover)
+#identity-box:hover:not(.no-hover),
+#tracking-protection-icon-container:hover
 {
 	background-color: var(--toolbarbutton-hover-background) !important;
 }
@@ -409,7 +415,8 @@
 .urlbar-icon:hover:active:not([disabled]),
 .urlbar-icon[open],
 #identity-box:hover:active:not(.no-hover),
-#identity-box[open]:not(.no-hover)
+#identity-box[open]:not(.no-hover),
+#tracking-protection-icon-container[open]
 {
 	background-color: var(--toolbarbutton-active-background) !important;
 	transition-duration: 0 !important;
@@ -643,7 +650,7 @@
 	
 	#bookmarks-menu-button .toolbarbutton-icon
 	{
-		translateX(.5px) !important;
+		transform: translateX(.5px) !important;
 	}
 	
 	#library-button
