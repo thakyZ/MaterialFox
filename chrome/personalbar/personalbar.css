@@ -13,10 +13,10 @@
 
 /* remove space between bookmark folder and popup */
 #PlacesToolbar menupopup {
-  margin-top: -8px !important;
+  margin-top: -13px !important;
 }
 
 /* override above rule for submenupopups */
 #PlacesToolbar menupopup > menu > menupopup {
-  margin-top: -14px !important;
+  margin-top: -19px !important;
 }
