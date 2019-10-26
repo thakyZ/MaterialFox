@@ -17,8 +17,12 @@ panel[type="autocomplete-richlistbox"]:not(#PopupAutoCompleteRichResult)
 	color: var(--arrowpanel-color) !important;
 	margin-left: -14px !important;
 	margin-top: -19px !important;
-	padding: 3px 14px 18px !important;
+	padding: 12px 14px 18px !important;
 	box-sizing: content-box !important;
+}
+
+#PlacesToolbar menupopup {
+	padding: 3px 14px 18px !important;
 }
 
 .panel-arrowcontent
