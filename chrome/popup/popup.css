@@ -21,6 +21,11 @@ panel[type="autocomplete-richlistbox"]:not(#PopupAutoCompleteRichResult)
 	box-sizing: content-box !important;
 }
 
+#ContentSelectDropdown menupopup {
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+} 
+
 #PlacesToolbar menupopup {
 	padding: 3px 14px 18px !important;
 }
