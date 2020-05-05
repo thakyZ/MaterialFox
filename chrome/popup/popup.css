@@ -194,7 +194,7 @@ scrollbox[orient=vertical] /* >=71 */
 }
 
 /* why still use scroll buttons; is this the middle ages? */
-.menupopup-scrollbutton
+#scrollbutton-up, #scrollbutton-down
 {
 	display: none !important;
 }
