@@ -145,7 +145,7 @@ panel[type="autocomplete-richlistbox"] > .autocomplete-richlistbox
 
 menupopup menuseparator
 {
-	margin: 8px 0 !important;
+	margin: 4px 0 !important;
 	padding: 0 !important;
 	height: 1px !important;
 	background: currentColor !important;
