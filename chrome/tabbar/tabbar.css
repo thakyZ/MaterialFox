@@ -424,6 +424,11 @@
 	padding-inline-end: 0 !important;
 }
 
+.tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected="true"]),
+.tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([selected="true"]) {
+    background-image: url(../icons/indicator-tab-attention.svg) !important;
+}
+
 .tab-label-container[pinned],
 .tab-close-button[pinned]
 {
