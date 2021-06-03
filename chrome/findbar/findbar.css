@@ -18,6 +18,7 @@ hbox[anonid="findbar-textbox-wrapper"]
 	position: relative !important;
 	display: flex !important;
 	padding: 2px !important;
+	height: 28px !important;
 	transition: background-color .1s var(--ease-basic) !important;
 }
 
@@ -29,9 +30,11 @@ hbox[anonid="findbar-textbox-wrapper"]:hover
 hbox[anonid="findbar-textbox-wrapper"]:focus-within
 {
 	background-color: var(--toolbar-field-focus-background-color) !important;
-	border: 2px solid var(--toolbar-field-focus-border-color) !important;
+	/* won't work in a var... */
+	border: 2px solid -moz-accent-color !important;
 	margin: -1px !important;
 	padding: 1px !important;
+	height: 30px !important;
 }
 
 hbox[anonid="findbar-textbox-wrapper"] toolbarbutton
@@ -46,6 +49,11 @@ hbox[anonid="findbar-textbox-wrapper"] toolbarbutton
 	transition: background-color .2s var(--ease-basic) !important;
 	margin: 0 !important;
 	box-shadow: none !important;
+}
+
+hbox[anonid="findbar-textbox-wrapper"] toolbarbutton[disabled]
+{
+	display: none !important;
 }
 
 hbox[anonid="findbar-textbox-wrapper"] toolbarbutton .toolbarbutton-text
