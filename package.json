@@ -1,0 +1,24 @@
+{
+  "name": "materialfox",
+  "version": "89.0.0",
+  "description": "A userChrome.css theme for Firefox inspired by Material Design",
+  "main": "user.js",
+  "scripts": {
+    "build": "sass src/:chrome/",
+    "build:watch": "sass --watch src/:chrome/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fmeyertoens/MaterialFox.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fmeyertoens/MaterialFox/issues"
+  },
+  "homepage": "https://github.com/fmeyertoens/MaterialFox#readme",
+  "devDependencies": {
+    "sass": "^1.34.1"
+  }
+}

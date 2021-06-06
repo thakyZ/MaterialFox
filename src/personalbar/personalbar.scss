@@ -1,5 +1,6 @@
-#navigator-toolbox toolbarbutton.bookmark-item:not(.subviewbutton) {
-  padding: 6px !important;
+#navigator-toolbox toolbarbutton.bookmark-item:not(.subviewbutton)
+{
+	padding: 6px !important;
 }
 
 #PlacesToolbar .bookmark-item[container] {
@@ -19,5 +20,3 @@
 #PlacesToolbar menupopup > menu > menupopup {
   margin-top: -11px !important;
 }
-
-/*# sourceMappingURL=personalbar.css.map */

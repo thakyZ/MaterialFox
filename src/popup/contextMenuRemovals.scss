@@ -1,0 +1,25 @@
+/* remove rarely used context menu entries */
+/* including top bar in context menu (#context-navigation) */
+#context-undo,
+#context-sep-undo,
+#context-delete,
+#spell-separator,
+#context-navigation,
+#context-sep-navigation,
+#context-bookmarklink,
+#context-setDesktopBackground,
+#context-sendimage,
+#context-pocket,
+#context-savelinktopocket,
+#context-sendpagetodevice,
+#context-sep-sendpagetodevice,
+#context-sendlinktodevice,
+#context-sep-sendlinktodevice,
+[id^=clipper_onenote_com-menuitem-],
+[id^=_a658a273-612e-489e-b4f1-5344e672f4f5_-menuitem-],
+[id^=support_lastpass_com-menuitem-],
+[id$=run-wave],
+#screenshots_mozilla_org-menuitem-_create-screenshot,
+#inspect-separator ~ menuseparator {
+  display: none;
+}
