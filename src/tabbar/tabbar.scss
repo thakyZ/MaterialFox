@@ -458,6 +458,9 @@
 
 #tabbrowser-tabs #tabs-newtab-button {
   margin-inline-start: 6px !important;
+  & > .toolbarbutton-icon {
+    max-width: 28px;
+  }
 }
 
 #tabbrowser-tabs[overflow] .tabbrowser-arrowscrollbox {
