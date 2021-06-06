@@ -4,7 +4,7 @@
 #context-sep-undo,
 #context-delete,
 #spell-separator,
-#context-navigation,
+#context-navigation:not([hidden]),
 #context-sep-navigation,
 #context-bookmarklink,
 #context-setDesktopBackground,
@@ -21,7 +21,7 @@
 [id$=run-wave],
 #screenshots_mozilla_org-menuitem-_create-screenshot,
 #inspect-separator ~ menuseparator {
-  display: none;
+  display: none !important;
 }
 
 /*# sourceMappingURL=contextMenuRemovals.css.map */
