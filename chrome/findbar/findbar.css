@@ -8,6 +8,12 @@
   box-shadow: none !important;
   margin-inline-start: 2px !important;
   padding-inline-start: 28px !important;
+  border-radius: 99px !important;
+  -moz-context-properties: fill;
+  fill: var(--lwt-toolbar-field-color);
+}
+.findbar-textbox:focus:not([status=notfound]) {
+  outline: none !important;
 }
 
 hbox[anonid=findbar-textbox-wrapper] {
@@ -19,11 +25,9 @@ hbox[anonid=findbar-textbox-wrapper] {
   height: 28px !important;
   transition: background-color 0.1s var(--ease-basic) !important;
 }
-
 hbox[anonid=findbar-textbox-wrapper]:hover {
   background-color: var(--toolbar-field-hover-background-color) !important;
 }
-
 hbox[anonid=findbar-textbox-wrapper]:focus-within {
   background-color: var(--toolbar-field-focus-background-color) !important;
   /* won't work in a var... */
@@ -32,7 +36,6 @@ hbox[anonid=findbar-textbox-wrapper]:focus-within {
   padding: 1px !important;
   height: 30px !important;
 }
-
 hbox[anonid=findbar-textbox-wrapper] toolbarbutton {
   border-radius: 99px !important;
   border: 0 !important;
@@ -45,22 +48,18 @@ hbox[anonid=findbar-textbox-wrapper] toolbarbutton {
   margin: 0 !important;
   box-shadow: none !important;
 }
-
 hbox[anonid=findbar-textbox-wrapper] toolbarbutton[disabled] {
   display: none !important;
 }
-
-hbox[anonid=findbar-textbox-wrapper] toolbarbutton .toolbarbutton-text {
-  visibility: collapse !important;
-}
-
 hbox[anonid=findbar-textbox-wrapper] toolbarbutton:not([disabled]):hover {
   background-color: var(--toolbarbutton-hover-background) !important;
 }
-
 hbox[anonid=findbar-textbox-wrapper] toolbarbutton:not([disabled]):hover:active {
   background-color: var(--toolbarbutton-active-background) !important;
   transition-duration: 0 !important;
+}
+hbox[anonid=findbar-textbox-wrapper] toolbarbutton .toolbarbutton-text {
+  visibility: collapse !important;
 }
 
 /*# sourceMappingURL=findbar.css.map */
