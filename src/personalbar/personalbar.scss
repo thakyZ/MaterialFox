@@ -1,22 +1,23 @@
-#navigator-toolbox toolbarbutton.bookmark-item:not(.subviewbutton)
-{
-	padding: 6px !important;
+#navigator-toolbox toolbarbutton.bookmark-item:not(.subviewbutton) {
+  padding: 6px !important;
 }
 
-#PlacesToolbar .bookmark-item[container] {
-  list-style-image: url(./folder.svg) !important;
-}
-
-#main-window[lwthemetextcolor=bright] #PlacesToolbar .bookmark-item[container] {
+#main-window[lwthemetextcolor="bright"]
+  #PlacesToolbar
+  .bookmark-item[container] {
   list-style-image: url(./folder-dark.svg) !important;
 }
 
-/* remove space between bookmark folder and popup */
-#PlacesToolbar menupopup {
-  margin-top: -5px !important;
-}
-
-/* override above rule for submenupopups */
-#PlacesToolbar menupopup > menu > menupopup {
-  margin-top: -11px !important;
+#PlacesToolbar {
+  & .bookmark-item[container] {
+    list-style-image: url(./folder.svg) !important;
+  }
+  /* remove space between bookmark folder and popup */
+  & menupopup {
+    margin-top: -5px !important;
+  }
+  /* override above rule for submenupopups */
+  & menupopup > menu > menupopup {
+    margin-top: -11px !important;
+  }
 }

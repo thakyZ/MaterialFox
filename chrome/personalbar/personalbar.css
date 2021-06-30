@@ -2,20 +2,20 @@
   padding: 6px !important;
 }
 
-#PlacesToolbar .bookmark-item[container] {
-  list-style-image: url(./folder.svg) !important;
-}
-
 #main-window[lwthemetextcolor=bright] #PlacesToolbar .bookmark-item[container] {
   list-style-image: url(./folder-dark.svg) !important;
 }
 
-/* remove space between bookmark folder and popup */
+#PlacesToolbar {
+  /* remove space between bookmark folder and popup */
+  /* override above rule for submenupopups */
+}
+#PlacesToolbar .bookmark-item[container] {
+  list-style-image: url(./folder.svg) !important;
+}
 #PlacesToolbar menupopup {
   margin-top: -5px !important;
 }
-
-/* override above rule for submenupopups */
 #PlacesToolbar menupopup > menu > menupopup {
   margin-top: -11px !important;
 }
