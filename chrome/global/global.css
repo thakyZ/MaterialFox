@@ -98,6 +98,12 @@
   height: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
 }
 
+#navigator-toolbox .toolbarbutton-1 > :-moz-any(.toolbarbutton-icon, .toolbarbutton-badge-stack),
+#downloads-indicator-anchor {
+	margin-inline-end: 0 !important;
+	max-width: 16px !important;
+}
+
 #navigator-toolbox > #PersonalToolbar .toolbarbutton-1 > .toolbarbutton-icon,
 #navigator-toolbox .toolbarbutton-1 > :-moz-any(.toolbarbutton-icon, .toolbarbutton-badge-stack),
 #scrollbutton-up[part=scrollbutton-up]:not(.menupopup-scrollbutton) > .toolbarbutton-icon,
