@@ -14,11 +14,8 @@
   }
   /* remove space between bookmark folder and popup */
   & menupopup {
-    margin-top: -4px !important;
-  }
-  /* override above rule for submenupopups */
-  & menupopup > menu > menupopup {
-    margin-top: -5px !important;
+    margin-block-start: -4px !important;
+    margin-inline-start: 2px;
   }
 
   #PlacesToolbarItems toolbarbutton.bookmark-item:not(.subviewbutton) {

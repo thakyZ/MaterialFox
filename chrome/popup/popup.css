@@ -5,6 +5,7 @@ menupopup {
   color: var(--arrowpanel-color) !important;
   -moz-context-properties: fill, fill-opacity !important;
   fill: currentColor !important;
+  --nested-margin: -4px !important;
 }
 
 menuitem,
@@ -31,6 +32,10 @@ menuitem[type=radio] .menu-iconic-icon {
   width: 16px !important;
   height: 16px !important;
   margin-inline-start: 0 !important;
+}
+
+.menupopup-arrowscrollbox {
+  border: none !important;
 }
 
 /*# sourceMappingURL=popup.css.map */
