@@ -1,7 +1,7 @@
 /* light mode */
 :root:not([style]),
-:root[style*="--lwt-accent-color:rgb(227, 228, 230);"],
-:root[style*="--lwt-accent-color:white;"] {
+:root[style*='--lwt-accent-color:rgb(227, 228, 230);'],
+:root[style*='--lwt-accent-color:white;'] {
   /* accentcolor */
   --lwt-accent-color: #dee1e6 !important;
 
@@ -42,8 +42,8 @@
 /* don't bother with sidebar in light mode */
 
 /* dark mode */
-:root[style*="--lwt-accent-color:rgb(12, 12, 13);"],
-:root[privatebrowsingmode="temporary"] {
+:root:-moz-lwtheme-brighttext,
+:root[privatebrowsingmode='temporary'] {
   /* accentcolor */
   --lwt-accent-color: #202124 !important;
 
@@ -93,7 +93,7 @@
   --autocomplete-popup-highlight-color: #fff !important;
 }
 
-:-moz-any(#sidebar-box, #sidebar)[style*="--sidebar-background-color:rgb(56, 56, 61);"] {
+:-moz-any(#sidebar-box, #sidebar)[style*='--sidebar-background-color:rgb(56, 56, 61);'] {
   /* sidebar */
   --sidebar-background-color: #333639 !important;
 
@@ -101,7 +101,7 @@
   --sidebar-text-color: #f1f3ee !important;
 }
 
-:-moz-any(.sidebar-panel, body)[style*="--lwt-sidebar-background-color:rgb(56, 56, 61);"] {
+:-moz-any(.sidebar-panel, body)[style*='--lwt-sidebar-background-color:rgb(56, 56, 61);'] {
   /* sidebar */
   --lwt-sidebar-background-color: #333639 !important;
 
@@ -133,19 +133,19 @@
   --toolbar-field-hover-background-color: hsl(216, 12%, 92%) !important;
   --toolbar-field-focus-background-color: hsl(0, 0%, 100%) !important;
 
-  &:-moz-any(:-moz-lwtheme-brighttext, [privatebrowsingmode="temporary"]) {
+  &:-moz-any(:-moz-lwtheme-brighttext, [privatebrowsingmode='temporary']) {
     --toolbar-field-background-color: #202124 !important;
     --toolbar-field-hover-background-color: #292a2d !important;
     --toolbar-field-focus-background-color: #202124 !important;
   }
 
-  &:not(:-moz-lwtheme):not([privatebrowsingmode="temporary"]) {
+  &:not(:-moz-lwtheme):not([privatebrowsingmode='temporary']) {
     --toolbar-bgcolor: hsl(0, 0%, 100%) !important;
     --toolbar-color: hsl(213, 5%, 39%) !important;
     --toolbox-border-bottom-color: hsl(0, 0%, 70%) !important;
   }
 
-  &:-moz-any([privatebrowsingmode="temporary"], :-moz-lwtheme-brighttext)
+  &:-moz-any([privatebrowsingmode='temporary'], :-moz-lwtheme-brighttext)
     :-moz-any(#urlbar, #searchbar) {
     --toolbarbutton-hover-background: hsl(206, 5%, 26%) !important;
     --toolbarbutton-active-background: hsl(210, 4%, 31%) !important;
@@ -157,7 +157,7 @@
   --tab-min-height: 34px !important;
 }
 
-@supports -moz-bool-pref("materialFox.reduceTabOverflow") {
+@supports -moz-bool-pref('materialFox.reduceTabOverflow') {
   #tabbrowser-tabs {
     --tab-min-width: 32px !important;
   }
@@ -171,7 +171,7 @@
 
 /* Ubuntu */
 @media (-moz-gtk-csd-available) {
-  :root:not(:-moz-lwtheme):not([privatebrowsingmode="temporary"]) {
+  :root:not(:-moz-lwtheme):not([privatebrowsingmode='temporary']) {
     --toolbar-bgcolor: -moz-dialog !important;
     --toolbar-color: -moz-dialogtext !important;
   }

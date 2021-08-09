@@ -31,7 +31,7 @@
 
 /* don't bother with sidebar in light mode */
 /* dark mode */
-:root[style*="--lwt-accent-color:rgb(12, 12, 13);"],
+:root:-moz-lwtheme-brighttext,
 :root[privatebrowsingmode=temporary] {
   /* accentcolor */
   --lwt-accent-color: #202124 !important;
