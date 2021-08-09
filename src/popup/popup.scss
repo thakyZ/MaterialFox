@@ -7,6 +7,13 @@ menupopup {
   -moz-context-properties: fill, fill-opacity !important;
   fill: currentColor !important;
   --nested-margin: -4px !important;
+
+  #ContentSelectDropdown:-moz-lwtheme-brighttext > & {
+    --content-select-background-image: linear-gradient(
+      var(--menu-background-color),
+      var(--menu-background-color)
+    );
+  }
 }
 
 menuitem,
