@@ -76,8 +76,7 @@
 /* no ::part workaround - may have side effects */
 #scrollbutton-up[part="scrollbutton-up"]:not(.menupopup-scrollbutton),
 #scrollbutton-down[part="scrollbutton-down"]:not(.menupopup-scrollbutton) {
-  margin-top: var(--tab-shadow-max-size) !important;
-  margin-bottom: var(--proton-tab-block-margin) !important;
+  margin-block-start: var(--tab-block-margin) !important;
 }
 
 .tabbrowser-tab {
@@ -249,8 +248,7 @@
 }
 
 .tab-stack {
-  margin-top: 4px !important;
-  margin-bottom: -4px !important;
+  margin-block-start: var(--tab-block-margin);
 }
 
 .tab-content {
@@ -328,6 +326,7 @@
 }
 
 .tab-background {
+  margin-block: 0 !important;
   background: var(--tab-bgcolor) !important;
   /* rounded top corners */
   border-radius: 8px 8px 0 0 !important;
@@ -509,6 +508,10 @@
 
 .tab-bottom-line {
   display: none !important;
+}
+
+#tabbrowser-arrowscrollbox {
+  min-height: calc(var(--tab-min-height) + var(--tab-block-margin)) !important;
 }
 
 /* < 72 */
