@@ -2,7 +2,6 @@
 
 menupopup {
   appearance: none !important;
-  background-color: var(--arrowpanel-background) !important;
   color: var(--arrowpanel-color) !important;
   -moz-context-properties: fill, fill-opacity !important;
   fill: currentColor !important;
@@ -44,4 +43,9 @@ menuitem[type='radio'] .menu-iconic-icon {
 
 .menupopup-arrowscrollbox {
   border: none !important;
+}
+
+.panel-viewstack .toolbarbutton-text {
+  // increase height of panel items to match favorites bar (.menu-iconic-text)
+  padding-block: 1px !important;
 }
