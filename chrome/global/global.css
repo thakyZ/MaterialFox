@@ -1,6 +1,6 @@
 @media (-moz-windows-compositor) and (-moz-windows-default-theme) {
   :root[tabsintitlebar][sizemode=normal] .titlebar-buttonbox-container {
-    margin-block-start: calc( 0px - (var(--space-above-tabbar) + 5px) ) !important;
+    margin-block-start: calc(0px - (var(--space-above-tabbar) + 5px)) !important;
   }
   :root[tabsintitlebar][sizemode=maximized] .titlebar-buttonbox-container {
     margin-block-start: calc(2px - (var(--space-above-tabbar))) !important;
@@ -88,6 +88,11 @@
 #scrollbutton-down[part=scrollbutton-down]:not(.menupopup-scrollbutton) > .toolbarbutton-icon {
   padding: 6px !important;
   background: 0 !important;
+}
+
+.toolbarbutton-icon {
+  -moz-context-properties: fill, stroke;
+  fill: var(--toolbarbutton-icon-fill);
 }
 
 /*

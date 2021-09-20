@@ -46,9 +46,9 @@
   /* legacy */
   --chrome-content-separator-color: #282828 !important;
   /* icons */
-  --lwt-toolbarbutton-icon-fill: #fff !important;
+  --toolbarbutton-icon-fill: #fff !important;
   /* icons_attention */
-  --lwt-toolbarbutton-icon-fill-attention: #5086ec !important;
+  --toolbarbutton-icon-fill-attention: #5086ec !important;
   /* button_background_hover */
   --lwt-toolbarbutton-hover-background: #434649 !important;
   /* button_background_active */
@@ -94,6 +94,7 @@
   --downloads-item-height: 48px !important;
   --item-height: 28px;
   --popup-border-radius: 8px;
+  --icon-button-radius: 50%;
   --toolbar-non-lwt-bgcolor: var(--toolbar-bgcolor) !important;
   --toolbar-non-lwt-textcolor: var(--toolbar-color) !important;
   --toolbar-field-fontsize: 14px !important;
@@ -102,6 +103,12 @@
   --toolbar-field-background-color: hsl(200, 12%, 95%) !important;
   --toolbar-field-hover-background-color: hsl(216, 12%, 92%) !important;
   --toolbar-field-focus-background-color: hsl(0, 0%, 100%) !important;
+  --arrowpanel-menuitem-margin: 0 !important;
+  --arrowpanel-menuitem-padding-block: 6px !important;
+  --arrowpanel-menuitem-padding-inline: 10px !important;
+  --arrowpanel-menuitem-padding: var(--arrowpanel-menuitem-padding-block)
+    var(--arrowpanel-menuitem-padding-inline) !important;
+  --arrowpanel-menuitem-border-radius: 0px !important;
 }
 :root:-moz-any(:-moz-lwtheme-brighttext, [privatebrowsingmode=temporary]) {
   --toolbar-field-background-color: #202124 !important;
