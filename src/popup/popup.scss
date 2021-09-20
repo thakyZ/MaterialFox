@@ -49,3 +49,18 @@ menuitem[type='radio'] .menu-iconic-icon {
   // increase height of panel items to match favorites bar (.menu-iconic-text)
   padding-block: 1px !important;
 }
+
+.subviewbutton-iconic.subviewbutton-back,
+.downloadButton {
+  border-radius: var(--icon-button-radius) !important;
+}
+
+#panelMenu_searchBookmarks,
+#panelMenuBookmarkThisPage,
+#widget-overflow-fixed-list,
+#appMenu-library-bookmarks-button,
+#appMenu-library-history-button {
+  > .toolbarbutton-text {
+    padding-inline-start: 8px;
+  }
+}
