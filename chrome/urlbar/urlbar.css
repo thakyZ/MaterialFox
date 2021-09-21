@@ -372,7 +372,7 @@
   background: 0 !important;
 }
 
-.urlbar-icon,
+.urlbar-page-action,
 #page-action-buttons > toolbarbutton,
 .searchbar-search-button,
 #identity-box,
@@ -426,7 +426,7 @@
   order: 99 !important;
 }
 
-.urlbar-icon:hover:not([disabled]),
+.urlbar-page-action:hover:not([disabled]),
 #page-action-buttons > toolbarbutton:hover:not([disabled]),
 .searchbar-search-button:hover,
 #identity-box:hover:not(.no-hover),
@@ -434,8 +434,8 @@
   background-color: var(--toolbarbutton-hover-background) !important;
 }
 
-.urlbar-icon:hover:active:not([disabled]),
-.urlbar-icon[open],
+.urlbar-page-action:hover:active:not([disabled]),
+.urlbar-page-action[open],
 #page-action-buttons > toolbarbutton:hover:active:not([disabled]),
 .searchbar-search-button:hover:active,
 #identity-box:hover:active:not(.no-hover),
