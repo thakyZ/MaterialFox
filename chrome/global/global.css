@@ -92,7 +92,7 @@
 
 .toolbarbutton-icon {
   -moz-context-properties: fill, stroke;
-  fill: var(--toolbarbutton-icon-fill);
+  fill: var(--lwt-toolbarbutton-icon-fill);
 }
 
 /*

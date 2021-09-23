@@ -46,9 +46,9 @@
   /* legacy */
   --chrome-content-separator-color: #282828 !important;
   /* icons */
-  --toolbarbutton-icon-fill: #fff !important;
+  --lwt-toolbarbutton-icon-fill: #fff !important;
   /* icons_attention */
-  --toolbarbutton-icon-fill-attention: #5086ec !important;
+  --lwt-toolbarbutton-icon-fill-attention: #5086ec !important;
   /* button_background_hover */
   --lwt-toolbarbutton-hover-background: #434649 !important;
   /* button_background_active */
