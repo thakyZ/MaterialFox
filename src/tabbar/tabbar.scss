@@ -112,8 +112,7 @@
     padding-inline-start: 8px !important;
   }
 
-  &[pinned]:-moz-any([soundplaying], [muted], [activemedia-blocked])
-    .tab-icon-image {
+  &[pinned]:-moz-any([soundplaying], [muted], [activemedia-blocked]) .tab-icon-image {
     visibility: hidden !important;
   }
 
@@ -121,9 +120,7 @@
     visibility: visible !important;
   }
 
-  &:is([image], [pinned])
-    > .tab-stack
-    > .tab-content[attention]:not([selected='true']),
+  &:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected='true']),
   & > .tab-stack > .tab-content[pinned][titlechanged]:not([selected='true']) {
     background-image: url(../icons/indicator-tab-attention.svg) !important;
     background-position-y: bottom !important;
@@ -155,9 +152,7 @@
     border-radius: 99px !important;
   }
 
-  &[visuallyselected][style*='transform']
-    + &[style*='transform']
-    .tab-content::after,
+  &[visuallyselected][style*='transform'] + &[style*='transform'] .tab-content::after,
   &[style*='transform']:not([visuallyselected]) .tab-content::before,
   &[style*='transform'] + &:not([visuallyselected]) .tab-content::before,
   &:not([visuallyselected]):not(:hover):not([multiselected])
@@ -183,10 +178,7 @@
     margin-bottom: 0 !important;
   }
 
-  &[overflow]
-    .tabbrowser-tab[pinned]
-    + .tabbrowser-tab:not([pinned])
-    .tab-content::before {
+  &[overflow] .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned]) .tab-content::before {
     opacity: 0 !important;
   }
 
@@ -195,9 +187,7 @@
     padding-inline-start: 8px !important;
   }
 
-  &[closebuttons='activetab']
-    .tabbrowser-tab:not([visuallyselected])
-    .tab-close-button {
+  &[closebuttons='activetab'] .tabbrowser-tab:not([visuallyselected]) .tab-close-button {
     visibility: collapse !important;
   }
 
@@ -304,8 +294,7 @@
   --tab-transition-duration: 0.2s;
 }
 
-:-moz-any(:root[privatebrowsingmode='temporary'], #TabsToolbar[brighttext])
-  .tabbrowser-tab {
+:-moz-any(:root[privatebrowsingmode='temporary'], #TabsToolbar[brighttext]) .tabbrowser-tab {
   --tab-opacity: 0;
   --tab-bgcolor: #fff;
 }
