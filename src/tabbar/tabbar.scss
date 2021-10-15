@@ -126,6 +126,8 @@
     > .tab-content[attention]:not([selected='true']),
   & > .tab-stack > .tab-content[pinned][titlechanged]:not([selected='true']) {
     background-image: url(../icons/indicator-tab-attention.svg) !important;
+    background-position-y: bottom !important;
+    background-size: 12px 12px;
   }
 
   &[usercontextid] > .tab-stack::after {
