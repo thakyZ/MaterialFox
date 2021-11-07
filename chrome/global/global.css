@@ -67,6 +67,7 @@
   max-height: 32px !important;
   height: 32px !important;
   min-height: 32px !important;
+  width: 32px;
 }
 
 #navigator-toolbox :-moz-any(.toolbarbutton-icon, .toolbarbutton-badge-stack),
@@ -78,15 +79,15 @@
 }
 
 #navigator-toolbox .toolbarbutton-1 > :-moz-any(.toolbarbutton-icon, .toolbarbutton-badge-stack) {
-  width: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
-  height: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
+  width: calc(2 * var(--toolbarbutton-inner-padding) + 10px) !important;
+  height: calc(2 * var(--toolbarbutton-inner-padding) + 10px) !important;
 }
 
 #navigator-toolbox > #PersonalToolbar .toolbarbutton-1 > .toolbarbutton-icon,
 #navigator-toolbox .toolbarbutton-1 > :-moz-any(.toolbarbutton-icon, .toolbarbutton-badge-stack),
 #scrollbutton-up[part=scrollbutton-up]:not(.menupopup-scrollbutton) > .toolbarbutton-icon,
 #scrollbutton-down[part=scrollbutton-down]:not(.menupopup-scrollbutton) > .toolbarbutton-icon {
-  padding: 6px !important;
+  padding: 3px !important;
   background: 0 !important;
 }
 
