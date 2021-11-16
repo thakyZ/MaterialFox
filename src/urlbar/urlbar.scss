@@ -174,8 +174,7 @@
   }
 
   &[focused] {
-    /* -moz-accent-color won't work in a var... */
-    border: 2px solid -moz-accent-color !important;
+    border: 2px solid var(--accent-color) !important;
     padding: 0 !important;
     margin: 0 !important;
   }
@@ -223,6 +222,10 @@
 
 #urlbar-input {
   width: 100% !important;
+
+  &::selection {
+    background-color: var(--accent-color) !important;
+  }
 }
 
 #urlbar-input,
