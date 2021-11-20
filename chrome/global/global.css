@@ -143,7 +143,6 @@
 .pointerlockfswarning::before {
   display: none !important;
 }
-
 .pointerlockfswarning-domain-text {
   margin-block: 8px 18px !important;
   margin-inline: 10px !important;
@@ -151,7 +150,6 @@
   font-weight: unset !important;
   align-self: start !important;
 }
-
 .pointerlockfswarning-domain {
   font-weight: unset !important;
 }
