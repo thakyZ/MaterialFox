@@ -78,16 +78,11 @@
   box-shadow: none !important;
 }
 
-#navigator-toolbox .toolbarbutton-1 > :-moz-any(.toolbarbutton-icon, .toolbarbutton-badge-stack) {
-  width: calc(2 * var(--toolbarbutton-inner-padding) + 10px) !important;
-  height: calc(2 * var(--toolbarbutton-inner-padding) + 10px) !important;
-}
-
 #navigator-toolbox > #PersonalToolbar .toolbarbutton-1 > .toolbarbutton-icon,
 #navigator-toolbox .toolbarbutton-1 > :-moz-any(.toolbarbutton-icon, .toolbarbutton-badge-stack),
 #scrollbutton-up[part=scrollbutton-up]:not(.menupopup-scrollbutton) > .toolbarbutton-icon,
 #scrollbutton-down[part=scrollbutton-down]:not(.menupopup-scrollbutton) > .toolbarbutton-icon {
-  padding: 3px !important;
+  padding: 6px !important;
   background: 0 !important;
 }
 

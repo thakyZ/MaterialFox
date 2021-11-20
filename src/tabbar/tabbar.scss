@@ -65,6 +65,10 @@
   }
 }
 
+#TabsToolbar {
+  // prevent variable override by Firefox
+  --toolbarbutton-inner-padding: inherit !important;
+}
 /* vertically center buttons in tab bar */
 #TabsToolbar toolbarbutton,
 #TabsToolbar .toolbar-items toolbarbutton.toolbarbutton-1,

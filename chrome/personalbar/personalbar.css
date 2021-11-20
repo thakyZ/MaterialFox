@@ -20,4 +20,9 @@
   border-radius: 8px !important;
 }
 
+#PlacesChevron > .toolbarbutton-icon {
+  width: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
+  height: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
+}
+
 /*# sourceMappingURL=personalbar.css.map */
