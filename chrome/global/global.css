@@ -23,6 +23,11 @@
     color: #666a6d !important;
   }
 }
+
+:root {
+  --space-above-tabbar: 0 !important;
+}
+
 #navigator-toolbox :-moz-any(toolbar, #nav-bar-customization-target):not(#toolbar-menubar) {
   -moz-box-align: center !important;
 }
