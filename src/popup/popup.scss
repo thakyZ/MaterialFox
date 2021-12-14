@@ -64,3 +64,7 @@ menuitem[type='radio'] .menu-iconic-icon {
     padding-inline-start: 8px;
   }
 }
+
+image[part='drop-indicator'] {
+  background-color: var(--primary-color) !important;
+}

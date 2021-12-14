@@ -1,0 +1,4 @@
+.checkbox-check[checked] {
+  --checkbox-checked-bgcolor: var(--primary-color);
+  fill: var(--primary-text-color) !important;
+}
