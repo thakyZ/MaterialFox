@@ -166,7 +166,7 @@
 }
 #urlbar[focused],
 #searchbar[focused] {
-  border: 2px solid var(--accent-color) !important;
+  border: 2px solid var(--primary-color) !important;
   padding: 0 !important;
   margin: 0 !important;
 }
@@ -214,7 +214,7 @@
   width: 100% !important;
 }
 #urlbar-input::selection {
-  background-color: var(--accent-color) !important;
+  background-color: var(--primary-color) !important;
 }
 
 #urlbar-input,

@@ -36,6 +36,7 @@
 }
 
 #navigator-toolbox :is(.toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton)),
+.close-icon.findbar-closebutton,
 /* no ::part workaround - may have side effects */
 #scrollbutton-up[part="scrollbutton-up"]:not(.menupopup-scrollbutton),
 #scrollbutton-down[part="scrollbutton-down"]:not(.menupopup-scrollbutton) {
