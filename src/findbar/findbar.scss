@@ -31,7 +31,7 @@ hbox[anonid='findbar-textbox-wrapper'] {
   }
   &:focus-within {
     background-color: var(--toolbar-field-focus-background-color) !important;
-    border: 2px solid var(--accent-color) !important;
+    border: 2px solid var(--primary-color) !important;
     margin: -1px !important;
     padding: 1px !important;
     height: 30px !important;

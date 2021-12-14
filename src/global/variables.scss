@@ -64,7 +64,7 @@
   --lwt-toolbarbutton-icon-fill: #fff !important;
 
   /* icons_attention */
-  --lwt-toolbarbutton-icon-fill-attention: var(--accent-color) !important;
+  --lwt-toolbarbutton-icon-fill-attention: var(--primary-color) !important;
 
   /* button_background_hover */
   --lwt-toolbarbutton-hover-background: #434649 !important;
@@ -93,7 +93,7 @@
   --autocomplete-popup-highlight-color: #fff !important;
 
   /* urlbar popup */
-  --lwt-popup-brighttext-url-color: var(--accent-color) !important;
+  --lwt-popup-brighttext-url-color: var(--primary-color) !important;
 }
 
 :-moz-any(#sidebar-box, #sidebar)[style*='--sidebar-background-color:rgb(56, 56, 61);'] {
@@ -113,7 +113,8 @@
 }
 
 :root {
-  --accent-color: hsl(219, 90%, 62%);
+  --primary-color: hsl(219, 90%, 62%);
+  --primary-text-color: white;
 
   --ease-in: cubic-bezier(0.4, 0, 1, 1);
   --ease-out: cubic-bezier(0, 0, 0.2, 1);
