@@ -134,8 +134,13 @@
 
   --toolbar-field-fontsize: 14px !important;
 
+  --space-above-tabbar: 8px;
+  &[sizemode='maximized'] {
+    --space-above-tabbar: 0px;
+  }
+
   --tab-separator-opacity: 0.35 !important;
-  --tab-block-margin: var(--space-above-tabbar, 8px) !important;
+  --tab-block-margin: var(--space-above-tabbar) !important;
 
   --toolbar-field-background-color: hsl(200, 12%, 95%) !important;
   --toolbar-field-hover-background-color: hsl(216, 12%, 92%) !important;
@@ -175,12 +180,6 @@
 @supports -moz-bool-pref('materialFox.reduceTabOverflow') {
   #tabbrowser-tabs {
     --tab-min-width: 32px !important;
-  }
-}
-
-@media (-moz-mac-yosemite-theme) {
-  :root[extradragspace] {
-    --space-above-tabbar: 8px !important;
   }
 }
 

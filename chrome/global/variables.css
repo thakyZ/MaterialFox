@@ -102,8 +102,9 @@
   --toolbar-non-lwt-bgcolor: var(--toolbar-bgcolor) !important;
   --toolbar-non-lwt-textcolor: var(--toolbar-color) !important;
   --toolbar-field-fontsize: 14px !important;
+  --space-above-tabbar: 8px;
   --tab-separator-opacity: 0.35 !important;
-  --tab-block-margin: var(--space-above-tabbar, 8px) !important;
+  --tab-block-margin: var(--space-above-tabbar) !important;
   --toolbar-field-background-color: hsl(200, 12%, 95%) !important;
   --toolbar-field-hover-background-color: hsl(216, 12%, 92%) !important;
   --toolbar-field-focus-background-color: hsl(0, 0%, 100%) !important;
@@ -113,6 +114,9 @@
   --arrowpanel-menuitem-padding: var(--arrowpanel-menuitem-padding-block)
     var(--arrowpanel-menuitem-padding-inline) !important;
   --arrowpanel-menuitem-border-radius: 0px !important;
+}
+:root[sizemode=maximized] {
+  --space-above-tabbar: 0px;
 }
 :root:-moz-any(:-moz-lwtheme-brighttext, [privatebrowsingmode=temporary]) {
   --toolbar-field-background-color: #202124 !important;
@@ -137,11 +141,6 @@
 @supports -moz-bool-pref("materialFox.reduceTabOverflow") {
   #tabbrowser-tabs {
     --tab-min-width: 32px !important;
-  }
-}
-@media (-moz-mac-yosemite-theme) {
-  :root[extradragspace] {
-    --space-above-tabbar: 8px !important;
   }
 }
 /* Ubuntu */
