@@ -61,16 +61,12 @@
   --toolbarbutton-inner-padding: inherit !important;
 }
 
-/* vertically center buttons in tab bar */
-#TabsToolbar .toolbar-items toolbarbutton.toolbarbutton-1,
-#TabsToolbar .tabbrowser-arrowscrollbox::part(scrollbutton-up),
-#TabsToolbar .tabbrowser-arrowscrollbox::part(scrollbutton-down),
-#scrollbutton-up[part=scrollbutton-up]:not(.menupopup-scrollbutton),
-#scrollbutton-down[part=scrollbutton-down]:not(.menupopup-scrollbutton) {
-  margin-block-start: var(--tab-block-margin) !important;
+#TabsToolbar-customization-target {
+  margin-block-start: var(--space-above-tabbar);
 }
 
 #tabbrowser-tabs {
+  margin-bottom: 0 !important;
   /* special case for pinned tabs when overflowing */
   /* clipped tabs */
 }
@@ -106,11 +102,6 @@
   max-width: 28px;
   padding: 6px !important;
 }
-#tabbrowser-tabs[overflow] .tabbrowser-arrowscrollbox {
-  border-radius: 8px 8px 0 0 !important;
-  background-color: rgba(0, 0, 0, 0.1) !important;
-  padding-inline-start: 0 !important;
-}
 #tabbrowser-tabs[overflow] {
   margin-inline-start: 8px !important;
 }
@@ -125,7 +116,7 @@
 }
 
 .tabbrowser-tab {
-  min-height: var(--tab-min-height) !important;
+  max-height: var(--tab-height) !important;
   overflow: visible !important;
   font-size: 12px !important;
   background: 0 !important;
@@ -194,10 +185,6 @@
 }
 .tabbrowser-tab[visuallyselected][style*=transform] + .tabbrowser-tab[style*=transform] .tab-content::after, .tabbrowser-tab[style*=transform]:not([visuallyselected]) .tab-content::before, .tabbrowser-tab[style*=transform] + .tabbrowser-tab:not([visuallyselected]) .tab-content::before, .tabbrowser-tab:not([visuallyselected]):not(:hover):not([multiselected]) + .tabbrowser-tab:not([visuallyselected]):not(:hover):not([multiselected]) .tab-content::before {
   opacity: var(--tab-separator-opacity) !important;
-}
-
-.tab-stack {
-  margin-block-start: var(--tab-block-margin);
 }
 
 .tab-content {
@@ -413,8 +400,13 @@
   display: none !important;
 }
 
-#tabbrowser-arrowscrollbox {
-  min-height: calc(var(--tab-min-height) + var(--tab-block-margin)) !important;
+.scrollbox-clip {
+  min-height: var(--tab-height) !important;
+}
+
+.scrollbox-clip > scrollbox {
+  max-height: var(--tab-height) !important;
+  min-height: var(--tab-height) !important;
 }
 
 /* < 72 */
@@ -448,6 +440,10 @@ spacer[part=overflow-end-indicator] {
     margin-top: 0.5px !important;
     margin-bottom: -0.5px !important;
   }
+}
+toolbar .toolbarbutton-1 > .toolbarbutton-icon {
+  width: calc(2 * var(--toolbarbutton-inner-padding) + 12px) !important;
+  height: calc(2 * var(--toolbarbutton-inner-padding) + 12px) !important;
 }
 
 /*# sourceMappingURL=tabbar.css.map */
