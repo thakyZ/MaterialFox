@@ -75,7 +75,9 @@
 }
 
 #tabbrowser-tabs {
+  // revert FF styling when dragging tabs
   margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 
   /* special case for pinned tabs when overflowing */
   &:not([overflow]) .tabbrowser-tab:not([first-visible-tab]),

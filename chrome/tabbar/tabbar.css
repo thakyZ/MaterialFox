@@ -67,6 +67,7 @@
 
 #tabbrowser-tabs {
   margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
   /* special case for pinned tabs when overflowing */
   /* clipped tabs */
 }
@@ -440,10 +441,6 @@ spacer[part=overflow-end-indicator] {
     margin-top: 0.5px !important;
     margin-bottom: -0.5px !important;
   }
-}
-toolbar .toolbarbutton-1 > .toolbarbutton-icon {
-  width: calc(2 * var(--toolbarbutton-inner-padding) + 12px) !important;
-  height: calc(2 * var(--toolbarbutton-inner-padding) + 12px) !important;
 }
 
 /*# sourceMappingURL=tabbar.css.map */
