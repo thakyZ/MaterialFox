@@ -23,7 +23,7 @@
   max-width: 100% !important;
 }
 
-.urlbarView-row[has-url][type]:not([type="bookmark"]) {
+.urlbarView-row[has-url][type]:not([type='bookmark']) {
   & .urlbarView-row-inner {
     flex-direction: column !important;
     align-items: flex-start !important;
@@ -41,7 +41,7 @@
 }
 
 .urlbarView-title-separator::before {
-  content: "-" !important;
+  content: '-' !important;
   color: inherit !important;
 }
 
@@ -87,20 +87,15 @@
   display: flex !important;
 }
 
-.urlbarView-row[type="search"]
-  ~ .urlbarView-row[type="search"]
-  .urlbarView-title-separator,
-.urlbarView-row[type="search"]
-  ~ .urlbarView-row[type="search"]
-  .urlbarView-action,
-.urlbarView-row[has-url][type]:not([type="bookmark"])
-  .urlbarView-title-separator,
+.urlbarView-row[type='search'] ~ .urlbarView-row[type='search'] .urlbarView-title-separator,
+.urlbarView-row[type='search'] ~ .urlbarView-row[type='search'] .urlbarView-action,
+.urlbarView-row[has-url][type]:not([type='bookmark']) .urlbarView-title-separator,
 .urlbarView-type-icon {
   display: none !important;
 }
 
-.urlbarView-row[type="tip"] > .urlbarView-row-inner > .urlbarView-favicon,
-.urlbarView-row[type="tip"] > .urlbarView-row-inner > .urlbarView-title,
+.urlbarView-row[type='tip'] > .urlbarView-row-inner > .urlbarView-favicon,
+.urlbarView-row[type='tip'] > .urlbarView-row-inner > .urlbarView-title,
 .urlbarView-tip-button,
 .urlbarView-tip-help {
   margin-block-end: 0 !important;
@@ -179,8 +174,7 @@
   }
 
   &[focused] {
-    /* -moz-accent-color won't work in a var... */
-    border: 2px solid -moz-accent-color !important;
+    border: 2px solid var(--primary-color) !important;
     padding: 0 !important;
     margin: 0 !important;
   }
@@ -190,9 +184,8 @@
     padding: 0 !important;
     border-radius: 8px !important;
     min-height: 37px !important;
-    margin: -4px 0 -1px !important;
-    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
-      0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12) !important;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+      0 3px 14px 2px rgba(0, 0, 0, 0.12) !important;
     z-index: 99999 !important;
   }
 }
@@ -228,6 +221,10 @@
 
 #urlbar-input {
   width: 100% !important;
+
+  &::selection {
+    background-color: var(--primary-color) !important;
+  }
 }
 
 #urlbar-input,
@@ -246,8 +243,9 @@
   }
 
   & #identity-box {
-    margin-inline-start: 8px !important;
-    margin-inline-end: 8px !important;
+    // adjust position because of missing border
+    margin-inline-start: 2px !important;
+    margin-block-start: -2px !important;
   }
 
   & .urlbarView {
@@ -318,11 +316,9 @@
 }
 
 /* separator */
-#urlbar[pageproxystate="valid"] {
-  &
-    #identity-box:-moz-any(.chromeUI, .extensionPage, .notSecureText)
-    #identity-icon-box::after {
-    content: "" !important;
+#urlbar[pageproxystate='valid'] {
+  & #identity-box:-moz-any(.chromeUI, .extensionPage, .notSecureText) #identity-icon-box::after {
+    content: '' !important;
     display: block !important;
     position: absolute !important;
     height: 16px !important;
@@ -407,7 +403,7 @@
   background: 0 !important;
 }
 
-.urlbar-icon,
+.urlbar-page-action,
 #page-action-buttons > toolbarbutton,
 .searchbar-search-button,
 #identity-box,
@@ -435,9 +431,8 @@
 
 #tracking-protection-icon-box {
   display: block !important;
-  transition: background-color 0.2s var(--ease-basic),
-    width 0.15s var(--ease-in), opacity 0.15s var(--ease-basic),
-    visibility 0s 0.2s !important;
+  transition: background-color 0.2s var(--ease-basic), width 0.15s var(--ease-in),
+    opacity 0.15s var(--ease-basic), visibility 0s 0.2s !important;
   opacity: 0 !important;
   visibility: hidden !important;
   width: 0 !important;
@@ -445,8 +440,8 @@
   #urlbar:hover &,
   #tracking-protection-icon-container[open] &,
   &[active] {
-    transition: background-color 0.2s var(--ease-basic),
-      width 0.3s var(--ease-out), opacity 0.3s var(--ease-basic) !important;
+    transition: background-color 0.2s var(--ease-basic), width 0.3s var(--ease-out),
+      opacity 0.3s var(--ease-basic) !important;
     opacity: 1 !important;
     visibility: visible !important;
     width: 32px !important;
@@ -467,7 +462,7 @@
   order: 99 !important;
 }
 
-.urlbar-icon:hover:not([disabled]),
+.urlbar-page-action:hover:not([disabled]),
 #page-action-buttons > toolbarbutton:hover:not([disabled]),
 .searchbar-search-button:hover,
 #identity-box:hover:not(.no-hover),
@@ -475,8 +470,8 @@
   background-color: var(--toolbarbutton-hover-background) !important;
 }
 
-.urlbar-icon:hover:active:not([disabled]),
-.urlbar-icon[open],
+.urlbar-page-action:hover:active:not([disabled]),
+.urlbar-page-action[open],
 #page-action-buttons > toolbarbutton:hover:active:not([disabled]),
 .searchbar-search-button:hover:active,
 #identity-box:hover:active:not(.no-hover),
@@ -491,9 +486,8 @@
 }
 
 .urlbar-page-action:-moz-any(#reader-mode-button, #pageActionButton, #pocket-button-box, #pageAction-urlbar-screenshots_mozilla_org, #pageAction-urlbar-sendToDevice, #pageAction-urlbar-emailLink, #pageAction-urlbar-copyURL, #pageAction-urlbar-shareURL, #pageAction-urlbar-addSearchEngine) {
-  transition: background-color 0.2s var(--ease-basic),
-    margin 0.15s var(--ease-in), opacity 0.15s var(--ease-basic),
-    visibility 0s 4s !important;
+  transition: background-color 0.2s var(--ease-basic), margin 0.15s var(--ease-in),
+    opacity 0.15s var(--ease-basic), visibility 0s 4s !important;
   opacity: 0 !important;
   visibility: hidden !important;
   margin-inline-start: -32px !important;
@@ -507,8 +501,8 @@
 #tracking-protection-icon-container[open]
   ~ #page-action-buttons
   .urlbar-page-action:-moz-any(#reader-mode-button, #pageActionButton, #pocket-button-box, #pageAction-urlbar-screenshots_mozilla_org, #pageAction-urlbar-sendToDevice, #pageAction-urlbar-emailLink, #pageAction-urlbar-copyURL, #pageAction-urlbar-shareURL, #pageAction-urlbar-addSearchEngine) {
-  transition: background-color 0.2s var(--ease-basic),
-    margin 0.3s var(--ease-out), opacity 0.3s var(--ease-basic) !important;
+  transition: background-color 0.2s var(--ease-basic), margin 0.3s var(--ease-out),
+    opacity 0.3s var(--ease-basic) !important;
   opacity: 1 !important;
   visibility: visible !important;
   margin-inline-start: 0 !important;
@@ -547,7 +541,7 @@
   }
 
   &::before {
-    content: "" !important;
+    content: '' !important;
     position: absolute !important;
     left: 0 !important;
     right: 0 !important;
@@ -603,7 +597,7 @@
   padding: 0 !important;
 }
 
-#identity-box[pageproxystate="valid"] {
+#identity-box[pageproxystate='valid'] {
   /* lock (secure) */
   &.verifiedDomain #identity-icon,
   &.mixedActiveBlocked #identity-icon {

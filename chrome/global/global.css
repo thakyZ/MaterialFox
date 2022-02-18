@@ -1,13 +1,6 @@
 @media (-moz-windows-compositor) and (-moz-windows-default-theme) {
-  :root[tabsintitlebar][sizemode=normal] .titlebar-buttonbox-container {
+  :root[tabsintitlebar] .titlebar-buttonbox-container {
     margin-block-start: calc(0px - (var(--space-above-tabbar) + 5px)) !important;
-  }
-  :root[tabsintitlebar][sizemode=maximized] .titlebar-buttonbox-container {
-    margin-block-start: calc(2px - (var(--space-above-tabbar))) !important;
-  }
-  :root[tabsintitlebar][sizemode=maximized]:not([extradragspace]) .titlebar-buttonbox-container {
-    -moz-box-align: none !important;
-    margin-block-start: -5px !important;
   }
 }
 
@@ -27,6 +20,7 @@
 }
 
 #navigator-toolbox :is(.toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton)),
+.close-icon.findbar-closebutton,
 #scrollbutton-up[part=scrollbutton-up]:not(.menupopup-scrollbutton),
 #scrollbutton-down[part=scrollbutton-down]:not(.menupopup-scrollbutton) {
   border: 2px solid transparent !important;
@@ -47,16 +41,19 @@
   margin: 0 !important;
 }
 #navigator-toolbox :is(.toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton))[disabled],
+.close-icon.findbar-closebutton[disabled],
 #scrollbutton-up[part=scrollbutton-up]:not(.menupopup-scrollbutton)[disabled],
 #scrollbutton-down[part=scrollbutton-down]:not(.menupopup-scrollbutton)[disabled] {
   opacity: 0.42 !important;
 }
 #navigator-toolbox :is(.toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton)):is(:hover, :hover:active, [checked], [open]):not([disabled]),
+.close-icon.findbar-closebutton:is(:hover, :hover:active, [checked], [open]):not([disabled]),
 #scrollbutton-up[part=scrollbutton-up]:not(.menupopup-scrollbutton):is(:hover, :hover:active, [checked], [open]):not([disabled]),
 #scrollbutton-down[part=scrollbutton-down]:not(.menupopup-scrollbutton):is(:hover, :hover:active, [checked], [open]):not([disabled]) {
   background-color: var(--toolbarbutton-hover-background) !important;
 }
 #navigator-toolbox :is(.toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton)):is(:hover:active, [checked], [open]):not([disabled]),
+.close-icon.findbar-closebutton:is(:hover:active, [checked], [open]):not([disabled]),
 #scrollbutton-up[part=scrollbutton-up]:not(.menupopup-scrollbutton):is(:hover:active, [checked], [open]):not([disabled]),
 #scrollbutton-down[part=scrollbutton-down]:not(.menupopup-scrollbutton):is(:hover:active, [checked], [open]):not([disabled]) {
   fill-opacity: 0.04 !important;

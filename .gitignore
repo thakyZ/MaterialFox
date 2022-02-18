@@ -141,3 +141,5 @@ fabric.properties
 
 # Dependencies
 node_modules/
+
+*.css.map

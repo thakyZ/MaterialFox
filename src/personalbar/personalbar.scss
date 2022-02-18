@@ -2,9 +2,7 @@
   padding: 6px !important;
 }
 
-#main-window[lwthemetextcolor="bright"]
-  #PlacesToolbar
-  .bookmark-item[container] {
+#main-window[lwthemetextcolor='bright'] #PlacesToolbar .bookmark-item[container] {
   list-style-image: url(./folder-dark.svg) !important;
 }
 
@@ -14,10 +12,16 @@
   }
   /* remove space between bookmark folder and popup */
   & menupopup {
-    margin-top: -5px !important;
+    margin-block-start: -4px !important;
+    margin-inline-start: 2px;
   }
-  /* override above rule for submenupopups */
-  & menupopup > menu > menupopup {
-    margin-top: -11px !important;
+
+  #PlacesToolbarItems toolbarbutton.bookmark-item:not(.subviewbutton) {
+    border-radius: 8px !important;
   }
+}
+
+#PlacesChevron > .toolbarbutton-icon {
+  width: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
+  height: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
 }

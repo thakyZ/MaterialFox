@@ -1,41 +1,70 @@
 @import './contextMenuRemovals.css';
 
-menupopup
-{
-	appearance: none !important;
-	background-color: var(--arrowpanel-background) !important;
-	color: var(--arrowpanel-color) !important;
-	-moz-context-properties: fill, fill-opacity !important;
-	fill: currentColor !important;
+menupopup {
+  appearance: none !important;
+  color: var(--arrowpanel-color) !important;
+  -moz-context-properties: fill, fill-opacity !important;
+  fill: currentColor !important;
+  --nested-margin: -4px !important;
+
+  #ContentSelectDropdown:-moz-lwtheme-brighttext > & {
+    --content-select-background-image: linear-gradient(
+      var(--menu-background-color),
+      var(--menu-background-color)
+    );
+  }
 }
 
 menuitem,
 menu > menu,
-menupopup > menu
-{
-	appearance: none !important;
+menupopup > menu {
+  appearance: none !important;
 }
 
-menuitem[disabled],
-menu[disabled]
-{
-	pointer-events: none !important;
+menuitem[disabled='true'],
+menu[disabled='true'] {
+  pointer-events: none !important;
 }
 
-.menu-right
-{
-	appearance: none !important;
-	list-style-image: url(menu-right-1x.svg) !important;
+.menu-right {
+  appearance: none !important;
+  list-style-image: url(menu-right-1x.svg) !important;
 }
 
-menuitem[type=radio][checked=true]
-{
-	list-style-image: url(checkmark-18dp.svg) !important;
+menuitem[type='radio'][checked='true'] {
+  list-style-image: url(checkmark-18dp.svg) !important;
 }
 
-menuitem[type=radio] .menu-iconic-icon
-{
-	width: 16px !important;
-	height: 16px !important;
-	margin-inline-start: 0 !important;
+menuitem[type='radio'] .menu-iconic-icon {
+  width: 16px !important;
+  height: 16px !important;
+  margin-inline-start: 0 !important;
+}
+
+.menupopup-arrowscrollbox {
+  border: none !important;
+}
+
+.panel-viewstack .toolbarbutton-text {
+  // increase height of panel items to match favorites bar (.menu-iconic-text)
+  padding-block: 1px !important;
+}
+
+.subviewbutton-iconic.subviewbutton-back,
+.downloadButton {
+  border-radius: var(--icon-button-radius) !important;
+}
+
+#panelMenu_searchBookmarks,
+#panelMenuBookmarkThisPage,
+#widget-overflow-fixed-list,
+#appMenu-library-bookmarks-button,
+#appMenu-library-history-button {
+  > .toolbarbutton-text {
+    padding-inline-start: 8px;
+  }
+}
+
+image[part='drop-indicator'] {
+  background-color: var(--primary-color) !important;
 }

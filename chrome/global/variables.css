@@ -19,9 +19,9 @@
   /* icons_attention */
   --lwt-toolbarbutton-icon-fill-attention: #5086ec !important;
   /* button_background_hover */
-  --lwt-toolbarbutton-hover-background: rgba(0, 0, 0, .07) !important;
+  --lwt-toolbarbutton-hover-background: rgba(0, 0, 0, 0.07) !important;
   /* button_background_active */
-  --lwt-toolbarbutton-active-background: rgba(0, 0, 0, .11) !important;
+  --lwt-toolbarbutton-active-background: rgba(0, 0, 0, 0.11) !important;
   --lwt-toolbar-field-color: #202124 !important;
   /* popup_highlight */
   --autocomplete-popup-highlight-background: #f2f2f2 !important;
@@ -31,7 +31,7 @@
 
 /* don't bother with sidebar in light mode */
 /* dark mode */
-:root[style*="--lwt-accent-color:rgb(12, 12, 13);"],
+:root:-moz-lwtheme-brighttext,
 :root[privatebrowsingmode=temporary] {
   /* accentcolor */
   --lwt-accent-color: #202124 !important;
@@ -48,7 +48,7 @@
   /* icons */
   --lwt-toolbarbutton-icon-fill: #fff !important;
   /* icons_attention */
-  --lwt-toolbarbutton-icon-fill-attention: #5086ec !important;
+  --lwt-toolbarbutton-icon-fill-attention: var(--primary-color) !important;
   /* button_background_hover */
   --lwt-toolbarbutton-hover-background: #434649 !important;
   /* button_background_active */
@@ -59,7 +59,7 @@
   /* popup_text */
   --arrowpanel-color: #fff !important;
   --autocomplete-popup-color: #fff !important;
-  --panel-disabled-color: hsla(0, 0%, 100%, .5) !important;
+  --panel-disabled-color: hsla(0, 0%, 100%, 0.5) !important;
   /* popup_border */
   --arrowpanel-border-color: #555 !important;
   --autocomplete-popup-border-color: #555 !important;
@@ -67,6 +67,8 @@
   --autocomplete-popup-highlight-background: #4c4f52 !important;
   /* popup_highlight_text */
   --autocomplete-popup-highlight-color: #fff !important;
+  /* urlbar popup */
+  --lwt-brighttext-url-color: var(--primary-color) !important;
 }
 
 :-moz-any(#sidebar-box, #sidebar)[style*="--sidebar-background-color:rgb(56, 56, 61);"] {
@@ -84,8 +86,10 @@
 }
 
 :root {
-  --ease-in: cubic-bezier(.4, 0, 1, 1);
-  --ease-out: cubic-bezier(0, 0, .2, 1);
+  --primary-color: hsl(219, 90%, 62%);
+  --primary-text-color: white;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
   --ease-basic: linear;
   --button-size: 32px;
   /* is this used? */
@@ -93,44 +97,51 @@
   /* is this used? */
   --downloads-item-height: 48px !important;
   --item-height: 28px;
-  --popup-border-radius: 8px;
+  --popup-border-radius: 0px;
+  --icon-button-radius: 50%;
   --toolbar-non-lwt-bgcolor: var(--toolbar-bgcolor) !important;
   --toolbar-non-lwt-textcolor: var(--toolbar-color) !important;
   --toolbar-field-fontsize: 14px !important;
-}
-
-#titlebar,
-#tabbrowser-tabs {
-  --tab-min-height: 32px !important;
-}
-
-@supports -moz-bool-pref("materialFox.reduceTabOverflow") {
-  #tabbrowser-tabs {
-    --tab-min-width: 32px !important;
-  }
-}
-:root {
-  --tab-separator-opacity: .35 !important;
+  --space-above-tabbar: 0;
+  --tab-separator-opacity: 0.35 !important;
+  --tab-block-margin: var(--space-above-tabbar) !important;
   --toolbar-field-background-color: hsl(200, 12%, 95%) !important;
   --toolbar-field-hover-background-color: hsl(216, 12%, 92%) !important;
   --toolbar-field-focus-background-color: hsl(0, 0%, 100%) !important;
+  --arrowpanel-menuitem-margin: 0 !important;
+  --arrowpanel-menuitem-padding-block: 6px !important;
+  --arrowpanel-menuitem-padding-inline: 10px !important;
+  --arrowpanel-menuitem-padding: var(--arrowpanel-menuitem-padding-block)
+    var(--arrowpanel-menuitem-padding-inline) !important;
+  --arrowpanel-menuitem-border-radius: 0px !important;
 }
-
+:root[sizemode=maximized] {
+  --space-above-tabbar: 0;
+}
 :root:-moz-any(:-moz-lwtheme-brighttext, [privatebrowsingmode=temporary]) {
   --toolbar-field-background-color: #202124 !important;
   --toolbar-field-hover-background-color: #292a2d !important;
   --toolbar-field-focus-background-color: #202124 !important;
 }
-
 :root:not(:-moz-lwtheme):not([privatebrowsingmode=temporary]) {
   --toolbar-bgcolor: hsl(0, 0%, 100%) !important;
   --toolbar-color: hsl(213, 5%, 39%) !important;
   --toolbox-border-bottom-color: hsl(0, 0%, 70%) !important;
 }
+:root:-moz-any([privatebrowsingmode=temporary], :-moz-lwtheme-brighttext) :-moz-any(#urlbar, #searchbar) {
+  --toolbarbutton-hover-background: hsl(206, 5%, 26%) !important;
+  --toolbarbutton-active-background: hsl(210, 4%, 31%) !important;
+}
 
-@media (-moz-mac-yosemite-theme) {
-  :root[extradragspace] {
-    --space-above-tabbar: 0 !important;
+#titlebar,
+#tabbrowser-tabs {
+  --tab-height: 32px !important;
+  --tab-min-height: var(--tab-height);
+}
+
+@supports -moz-bool-pref("materialFox.reduceTabOverflow") {
+  #tabbrowser-tabs {
+    --tab-min-width: 32px !important;
   }
 }
 /* Ubuntu */
@@ -143,26 +154,33 @@
 :root:-moz-lwtheme-darktext,
 :root toolbar:not([brighttext]),
 .tabbrowser-tab[visuallyselected] {
-  --toolbarbutton-hover-background: var(--lwt-toolbarbutton-hover-background, hsla(0, 0%, 0%, .07)) !important;
-  --toolbarbutton-active-background: var(--lwt-toolbarbutton-active-background, hsla(0, 0%, 0%, .11)) !important;
+  --toolbarbutton-hover-background: var(
+    --lwt-toolbarbutton-hover-background,
+    hsla(0, 0%, 0%, 0.07)
+  ) !important;
+  --toolbarbutton-active-background: var(
+    --lwt-toolbarbutton-active-background,
+    hsla(0, 0%, 0%, 0.11)
+  ) !important;
 }
 
 :root:-moz-lwtheme-brighttext,
 :root toolbar[brighttext],
 .tabbrowser-tab[visuallyselected]:-moz-lwtheme-brighttext {
-  --toolbarbutton-hover-background: var(--lwt-toolbarbutton-hover-background, hsla(0, 0%, 100%, .1)) !important;
-  --toolbarbutton-active-background: var(--lwt-toolbarbutton-active-background, hsla(0, 0%, 100%, .17)) !important;
+  --toolbarbutton-hover-background: var(
+    --lwt-toolbarbutton-hover-background,
+    hsla(0, 0%, 100%, 0.1)
+  ) !important;
+  --toolbarbutton-active-background: var(
+    --lwt-toolbarbutton-active-background,
+    hsla(0, 0%, 100%, 0.17)
+  ) !important;
 }
 
 /* special case for urlbar buttons */
 :-moz-any(#urlbar, #searchbar) {
   --toolbarbutton-hover-background: hsl(210, 5%, 85%) !important;
   --toolbarbutton-active-background: hsl(210, 4%, 80%) !important;
-}
-
-:root:-moz-any([privatebrowsingmode=temporary], :-moz-lwtheme-brighttext) :-moz-any(#urlbar, #searchbar) {
-  --toolbarbutton-hover-background: hsl(206, 5%, 26%) !important;
-  --toolbarbutton-active-background: hsl(210, 4%, 31%) !important;
 }
 
 /*# sourceMappingURL=variables.css.map */

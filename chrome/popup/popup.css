@@ -1,10 +1,16 @@
 @import './contextMenuRemovals.css';
 menupopup {
   appearance: none !important;
-  background-color: var(--arrowpanel-background) !important;
   color: var(--arrowpanel-color) !important;
   -moz-context-properties: fill, fill-opacity !important;
   fill: currentColor !important;
+  --nested-margin: -4px !important;
+}
+#ContentSelectDropdown:-moz-lwtheme-brighttext > menupopup {
+  --content-select-background-image: linear-gradient(
+    var(--menu-background-color),
+    var(--menu-background-color)
+  );
 }
 
 menuitem,
@@ -13,8 +19,8 @@ menupopup > menu {
   appearance: none !important;
 }
 
-menuitem[disabled],
-menu[disabled] {
+menuitem[disabled=true],
+menu[disabled=true] {
   pointer-events: none !important;
 }
 
@@ -31,6 +37,31 @@ menuitem[type=radio] .menu-iconic-icon {
   width: 16px !important;
   height: 16px !important;
   margin-inline-start: 0 !important;
+}
+
+.menupopup-arrowscrollbox {
+  border: none !important;
+}
+
+.panel-viewstack .toolbarbutton-text {
+  padding-block: 1px !important;
+}
+
+.subviewbutton-iconic.subviewbutton-back,
+.downloadButton {
+  border-radius: var(--icon-button-radius) !important;
+}
+
+#panelMenu_searchBookmarks > .toolbarbutton-text,
+#panelMenuBookmarkThisPage > .toolbarbutton-text,
+#widget-overflow-fixed-list > .toolbarbutton-text,
+#appMenu-library-bookmarks-button > .toolbarbutton-text,
+#appMenu-library-history-button > .toolbarbutton-text {
+  padding-inline-start: 8px;
+}
+
+image[part=drop-indicator] {
+  background-color: var(--primary-color) !important;
 }
 
 /*# sourceMappingURL=popup.css.map */

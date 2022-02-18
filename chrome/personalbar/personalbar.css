@@ -8,16 +8,21 @@
 
 #PlacesToolbar {
   /* remove space between bookmark folder and popup */
-  /* override above rule for submenupopups */
 }
 #PlacesToolbar .bookmark-item[container] {
   list-style-image: url(./folder.svg) !important;
 }
 #PlacesToolbar menupopup {
-  margin-top: -5px !important;
+  margin-block-start: -4px !important;
+  margin-inline-start: 2px;
 }
-#PlacesToolbar menupopup > menu > menupopup {
-  margin-top: -11px !important;
+#PlacesToolbar #PlacesToolbarItems toolbarbutton.bookmark-item:not(.subviewbutton) {
+  border-radius: 8px !important;
+}
+
+#PlacesChevron > .toolbarbutton-icon {
+  width: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
+  height: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
 }
 
 /*# sourceMappingURL=personalbar.css.map */

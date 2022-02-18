@@ -13,12 +13,12 @@
   border-radius: 99px !important;
   -moz-context-properties: fill;
   fill: var(--lwt-toolbar-field-color);
-  &:focus:not([status="notfound"]) {
+  &:focus:not([status='notfound']) {
     outline: none !important;
   }
 }
 
-hbox[anonid="findbar-textbox-wrapper"] {
+hbox[anonid='findbar-textbox-wrapper'] {
   background-color: var(--toolbar-field-background-color) !important;
   border-radius: 16px !important;
   position: relative !important;
@@ -31,8 +31,7 @@ hbox[anonid="findbar-textbox-wrapper"] {
   }
   &:focus-within {
     background-color: var(--toolbar-field-focus-background-color) !important;
-    /* won't work in a var... */
-    border: 2px solid -moz-accent-color !important;
+    border: 2px solid var(--primary-color) !important;
     margin: -1px !important;
     padding: 1px !important;
     height: 30px !important;
@@ -62,4 +61,8 @@ hbox[anonid="findbar-textbox-wrapper"] {
       visibility: collapse !important;
     }
   }
+}
+
+.close-icon.findbar-closebutton > .toolbarbutton-icon {
+  padding: 6px;
 }
