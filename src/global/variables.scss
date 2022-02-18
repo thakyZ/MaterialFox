@@ -136,7 +136,7 @@
 #titlebar,
 #tabbrowser-tabs
 {
- 	--tab-min-height: 34px !important;
+ 	--tab-min-height: 32px !important;
 }
 
 @supports -moz-bool-pref("materialFox.reduceTabOverflow")
@@ -174,7 +174,7 @@
 {
 	:root[extradragspace]
 	{
-		--space-above-tabbar: 8px !important;
+		--space-above-tabbar: 0 !important;
 	}
 }
 
