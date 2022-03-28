@@ -380,23 +380,32 @@
   transition-timing-function: var(--ease-basic) !important;
   fill-opacity: 1 !important;
   opacity: 1 !important;
+
+  &:hover {
+    background-color: var(--toolbarbutton-hover-background) !important;
+
+    &:active {
+      background-color: var(--toolbarbutton-active-background) !important;
+    }
+  }
 }
 
-.tab-close-button:hover,
-.tab-icon-overlay:-moz-any([soundplaying], [muted], [activemedia-blocked]):hover,
-.tab-icon-sound:hover {
-  background-color: var(--toolbarbutton-hover-background) !important;
-}
-
-.tab-close-button:hover:active,
-.tab-icon-overlay:-moz-any([soundplaying], [muted], [activemedia-blocked]):hover:active,
-.tab-icon-sound:hover:active {
-  background-color: var(--toolbarbutton-active-background) !important;
+.tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
+  grid-area: 1 / 2;
+  padding: 0;
+  margin-inline-start: 5px;
+  margin-inline-end: 0;
 }
 
 .tab-icon-overlay[pinned] {
   margin: 0 !important;
   margin-inline-start: -16px !important;
+}
+
+:root[uidensity='compact']
+  .tab-icon-stack:not([pinned], [sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked])
+  > :not(.tab-icon-overlay) {
+  opacity: 1 !important;
 }
 
 .tab-sharing-icon-overlay {
