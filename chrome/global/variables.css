@@ -71,14 +71,14 @@
   --lwt-brighttext-url-color: var(--primary-color) !important;
 }
 
-:-moz-any(#sidebar-box, #sidebar)[style*="--sidebar-background-color:rgb(56, 56, 61);"] {
+:is(#sidebar-box, #sidebar)[style*="--sidebar-background-color:rgb(56, 56, 61);"] {
   /* sidebar */
   --sidebar-background-color: #333639 !important;
   /* sidebar_text */
   --sidebar-text-color: #f1f3ee !important;
 }
 
-:-moz-any(.sidebar-panel, body)[style*="--lwt-sidebar-background-color:rgb(56, 56, 61);"] {
+:is(.sidebar-panel, body)[style*="--lwt-sidebar-background-color:rgb(56, 56, 61);"] {
   /* sidebar */
   --lwt-sidebar-background-color: #333639 !important;
   /* sidebar_text */
@@ -189,7 +189,7 @@
 }
 
 /* special case for urlbar buttons */
-:-moz-any(#urlbar, #searchbar) {
+:is(#urlbar, #searchbar) {
   --toolbarbutton-hover-background: hsl(210, 5%, 85%) !important;
   --toolbarbutton-active-background: hsl(210, 4%, 80%) !important;
 }
