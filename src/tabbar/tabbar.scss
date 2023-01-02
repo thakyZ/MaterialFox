@@ -123,10 +123,6 @@
 
   & #tabs-newtab-button {
     margin-inline-start: 6px !important;
-    & > .toolbarbutton-icon {
-      max-width: 28px;
-      padding: 6px !important;
-    }
   }
 
   &[overflow] {
@@ -390,7 +386,11 @@
   }
 }
 
-.tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
+.tab-icon-overlay:not([pinned], [sharing], [crashed]):is(
+    [soundplaying],
+    [muted],
+    [activemedia-blocked]
+  ) {
   grid-area: 1 / 2;
   padding: 0 !important;
   margin-inline-start: 5px;
@@ -403,7 +403,11 @@
 }
 
 :root[uidensity='compact']
-  .tab-icon-stack:not([pinned], [sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked])
+  .tab-icon-stack:not([pinned], [sharing], [crashed]):is(
+    [soundplaying],
+    [muted],
+    [activemedia-blocked]
+  )
   > :not(.tab-icon-overlay) {
   opacity: 1 !important;
 }
