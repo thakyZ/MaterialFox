@@ -212,8 +212,8 @@ richlistitem[originaltype=loginsFooter] .ac-site-icon {
   list-style-image: url(audio-muted.svg) !important;
 }
 
-.tab-icon-overlay[activemedia-blocked],
-.tab-icon-sound[activemedia-blocked] {
+.tab-icon-overlay[activemedia-blocked]:not([soundplaying]),
+.tab-icon-sound[activemedia-blocked]:not([soundplaying]) {
   list-style-image: url(media-blocked.svg) !important;
 }
 

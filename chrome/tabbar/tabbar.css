@@ -326,9 +326,9 @@
 
 .tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
   grid-area: 1/2;
-  padding: 0;
+  padding: 0 !important;
   margin-inline-start: 5px;
-  margin-inline-end: 0;
+  margin-inline-end: 0 !important;
 }
 
 .tab-icon-overlay[pinned] {
