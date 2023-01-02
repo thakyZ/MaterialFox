@@ -112,8 +112,13 @@
   --lwt-sidebar-text-color: #f1f3ee !important;
 }
 
+:host,
 :root {
-  --primary-color: hsl(219, 90%, 62%);
+  --primary-color: hsl(219, 72%, 53%);
+  // hover
+  --primary-color-lighter: hsl(219, 75%, 60%);
+  // active
+  --primary-color-very-light: hsl(219, 80%, 65%);
   --primary-text-color: white;
 
   --ease-in: cubic-bezier(0.4, 0, 1, 1);

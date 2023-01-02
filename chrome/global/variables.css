@@ -85,8 +85,11 @@
   --lwt-sidebar-text-color: #f1f3ee !important;
 }
 
+:host,
 :root {
-  --primary-color: hsl(219, 90%, 62%);
+  --primary-color: hsl(219, 72%, 53%);
+  --primary-color-lighter: hsl(219, 75%, 60%);
+  --primary-color-very-light: hsl(219, 80%, 65%);
   --primary-text-color: white;
   --ease-in: cubic-bezier(0.4, 0, 1, 1);
   --ease-out: cubic-bezier(0, 0, 0.2, 1);
@@ -115,30 +118,36 @@
     var(--arrowpanel-menuitem-padding-inline) !important;
   --arrowpanel-menuitem-border-radius: 0px !important;
 }
+:host[sizemode=maximized],
 :root[sizemode=maximized] {
   --space-above-tabbar: 0px;
 }
+:host[privatebrowsingmode=temporary],
 :root[privatebrowsingmode=temporary] {
   --toolbar-field-background-color: #202124 !important;
   --toolbar-field-hover-background-color: #292a2d !important;
   --toolbar-field-focus-background-color: #202124 !important;
 }
+:host[privatebrowsingmode=temporary] :is(#urlbar, #searchbar),
 :root[privatebrowsingmode=temporary] :is(#urlbar, #searchbar) {
   --toolbarbutton-hover-background: hsl(206, 5%, 26%) !important;
   --toolbarbutton-active-background: hsl(210, 4%, 31%) !important;
 }
+:host:not(:-moz-lwtheme):not([privatebrowsingmode=temporary]),
 :root:not(:-moz-lwtheme):not([privatebrowsingmode=temporary]) {
   --toolbar-bgcolor: hsl(0, 0%, 100%) !important;
   --toolbar-color: hsl(213, 5%, 39%) !important;
   --toolbox-border-bottom-color: hsl(0, 0%, 70%) !important;
 }
 @media (prefers-color-scheme: dark) {
-  :root {
+  :host,
+:root {
     --toolbar-field-background-color: #202124 !important;
     --toolbar-field-hover-background-color: #292a2d !important;
     --toolbar-field-focus-background-color: #202124 !important;
   }
-  :root :is(#urlbar, #searchbar) {
+  :host :is(#urlbar, #searchbar),
+:root :is(#urlbar, #searchbar) {
     --toolbarbutton-hover-background: hsl(206, 5%, 26%) !important;
     --toolbarbutton-active-background: hsl(210, 4%, 31%) !important;
   }
