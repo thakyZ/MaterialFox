@@ -262,6 +262,7 @@
     background-color: currentColor !important;
     width: 1px !important;
     height: 20px !important;
+    top: 50%;
     transform: translateY(-10px) !important;
     opacity: 0 !important;
     transition: opacity 0.2s var(--ease-basic) !important;
