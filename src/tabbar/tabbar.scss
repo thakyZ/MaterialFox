@@ -167,6 +167,9 @@
   &[visuallyselected] {
     --tab-transition-duration: 0s;
     color: var(--toolbar-color) !important;
+
+    // above other tabs (tab corners overlap otherwise)
+    z-index: 1;
   }
 
   /* regular */
@@ -310,10 +313,12 @@
 }
 
 .tab-background {
+  // used by FF
+  /* rounded top corners */
+  --tab-border-radius: var(--tab-top-radius) var(--tab-top-radius) 0 0;
+
   margin-block: 0 !important;
   background: var(--tab-bgcolor) !important;
-  /* rounded top corners */
-  border-radius: 8px 8px 0 0 !important;
   position: relative !important;
   border: 0 !important;
   transition: opacity var(--tab-transition-duration) var(--ease-basic),
@@ -324,28 +329,32 @@
   /* rounded bottom corners */
   &::before,
   &::after {
+    --radius: var(--tab-bottom-radius);
+    --half-radius: calc(var(--radius) / 2);
+
     content: '' !important;
     display: block !important;
     position: absolute !important;
-    width: 8px !important;
-    height: 8px !important;
+    width: var(--radius) !important;
+    height: var(--radius) !important;
     bottom: 0 !important;
     pointer-events: none !important;
     transition: box-shadow 0s var(--tab-transition-duration) var(--ease-basic) !important;
   }
 
   &::before {
-    border-bottom-right-radius: 8px !important;
+    border-bottom-right-radius: var(--radius) !important;
     left: 0 !important;
-    transform: translateX(-8px) !important;
-    box-shadow: 4px 4px 0 4px var(--tab-bgcolor) !important;
+    transform: translateX(calc(-1 * var(--radius))) !important;
+    box-shadow: var(--half-radius) var(--half-radius) 0 var(--half-radius) var(--tab-bgcolor) !important;
   }
 
   &::after {
-    border-bottom-left-radius: 8px !important;
+    border-bottom-left-radius: var(--radius) !important;
     right: 0 !important;
-    transform: translateX(8px) !important;
-    box-shadow: -4px 4px 0 4px var(--tab-bgcolor) !important;
+    transform: translateX(var(--radius)) !important;
+    box-shadow: calc(-1 * var(--half-radius)) var(--half-radius) 0 var(--half-radius)
+      var(--tab-bgcolor) !important;
   }
 }
 
