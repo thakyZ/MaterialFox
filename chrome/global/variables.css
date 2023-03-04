@@ -147,6 +147,7 @@
     --toolbar-field-background-color: #202124 !important;
     --toolbar-field-hover-background-color: #292a2d !important;
     --toolbar-field-focus-background-color: #202124 !important;
+    --focus-outline-color: var(--primary-color) !important;
   }
   :host :is(#urlbar, #searchbar),
 :root :is(#urlbar, #searchbar) {

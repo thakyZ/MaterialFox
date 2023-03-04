@@ -159,9 +159,15 @@
   --tab-bgcolor: #000;
   --tab-transition-duration: 0.2s;
 
-  &:not([selected='true']):hover,
-  &[multiselected]:not([selected='true']) {
+  &:not([selected]):hover,
+  &[multiselected]:not([selected]) {
     --tab-opacity: 0.1;
+    --focus-outline-color: var(--tab-bgcolor);
+  }
+
+  // selected tab with focus outline
+  & .tab-background[multiselected][selected] {
+    --tab-border-radius: var(--tab-top-radius);
   }
 
   &[visuallyselected] {
@@ -340,6 +346,9 @@
     bottom: 0 !important;
     pointer-events: none !important;
     transition: box-shadow 0s var(--tab-transition-duration) var(--ease-basic) !important;
+
+    // position behind tab-background focus outline
+    z-index: -1;
   }
 
   &::before {

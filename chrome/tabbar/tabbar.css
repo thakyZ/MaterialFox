@@ -127,8 +127,12 @@
   /* neighbouring tabs should "pinch" together */
   /* hide new tab favicon */
 }
-.tabbrowser-tab:not([selected=true]):hover, .tabbrowser-tab[multiselected]:not([selected=true]) {
+.tabbrowser-tab:not([selected]):hover, .tabbrowser-tab[multiselected]:not([selected]) {
   --tab-opacity: 0.1;
+  --focus-outline-color: var(--tab-bgcolor);
+}
+.tabbrowser-tab .tab-background[multiselected][selected] {
+  --tab-border-radius: var(--tab-top-radius);
 }
 .tabbrowser-tab[visuallyselected] {
   --tab-transition-duration: 0s;
@@ -270,6 +274,7 @@
   bottom: 0 !important;
   pointer-events: none !important;
   transition: box-shadow 0s var(--tab-transition-duration) var(--ease-basic) !important;
+  z-index: -1;
 }
 .tab-background::before {
   border-bottom-right-radius: var(--radius) !important;

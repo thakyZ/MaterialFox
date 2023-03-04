@@ -182,6 +182,8 @@
     --toolbar-field-hover-background-color: #292a2d !important;
     --toolbar-field-focus-background-color: #202124 !important;
 
+    --focus-outline-color: var(--primary-color) !important;
+
     & :is(#urlbar, #searchbar) {
       --toolbarbutton-hover-background: hsl(206, 5%, 26%) !important;
       --toolbarbutton-active-background: hsl(210, 4%, 31%) !important;
