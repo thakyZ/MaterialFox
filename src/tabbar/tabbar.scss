@@ -207,6 +207,10 @@
     visibility: visible !important;
   }
 
+  &:not([visuallyselected], :hover) .tab-close-button {
+    display: none;
+  }
+
   &:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected='true']),
   & > .tab-stack > .tab-content[pinned][titlechanged]:not([selected='true']) {
     background-image: url(../icons/indicator-tab-attention.svg) !important;
