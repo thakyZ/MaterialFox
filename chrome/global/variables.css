@@ -38,7 +38,7 @@
   /* textcolor */
   --lwt-text-color: #9ba0a5 !important;
   /* toolbar */
-  --toolbar-bgcolor: #333639 !important;
+  --toolbar-bgcolor: hsl(0, 0%, 20%) !important;
   /* toolbar_text */
   --toolbar-color: #fff !important;
   /* toolbar_bottom_separator */
