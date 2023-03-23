@@ -17,20 +17,26 @@ This is a userChrome.css theme, which means you must manually add it to your Fir
 1. See [Recommended instructions](#recommended-instructions) if you'd prefer a more Chrome-like experience.
 1. Restart Firefox.
 
-### Recommended instructions
+### Recommended settings
 
-Add space above tab bar:
+You might want to set the following preferences in `about:config`.
+| Pref | Type | Value | Note |
+| - | - | - | - |
+| materialFox.maximizedNoTopPadding | Boolean | True | Add space above the tab bar when Firefox is maximized |
+| browser.tabs.tabClipWidth | Number | 83 | Replicate Chrome's behaviour for clipped tabs (default is `140`) |
+| security.insecure_connection_text.enabled | Boolean | True | Replicate Chrome's "Not Secure" text on HTTP |
 
-- Right click on toolbar -> Customize.
-- Check Drag Space checkbox.
+## Development
 
-Replicate Chrome behaviour for clipped tabs:
+This theme uses SCSS to generate the CSS files for Firefox.
 
-- [about:config] Set `browser.tabs.tabClipWidth` to `83` (default is `140`).
+### Install dependencies
 
-Replicate Chrome's "Not Secure" text on HTTP:
+`npm install`
 
-- [about:config] Set `security.insecure_connection_text.enabled` to `true`.
+### Compile SCSS to CSS
+
+`npm run build[:watch]`
 
 ## Please note
 
