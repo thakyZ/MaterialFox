@@ -14,7 +14,7 @@ This is a userChrome.css theme, which means you must manually add it to your Fir
 
 1. This theme depends on [uc.css.js](https://github.com/aminomancer/uc.css.js) and [fx-autoconfig](https://github.com/MrOtherGuy/fx-autoconfig) in order to use the `part` selector in author stylesheets. Please follow their installation instructions ([here](https://github.com/MrOtherGuy/fx-autoconfig#setting-up-configjs-from-program-folder)) first.
 1. Copy the chrome folder and user.js file into your Firefox profile directory. To find your profile directory, go to about:support or about:profiles.
-1. See [Recommended instructions](#recommended-instructions) if you'd prefer a more Chrome-like experience.
+1. See [Recommended settings](#recommended-settings) if you'd prefer a more Chrome-like experience.
 1. Restart Firefox.
 
 ### Recommended settings
@@ -22,7 +22,7 @@ This is a userChrome.css theme, which means you must manually add it to your Fir
 You might want to set the following preferences in `about:config`.
 | Pref | Type | Value | Note |
 | - | - | - | - |
-| materialFox.maximizedNoTopPadding | Boolean | True | Add space above the tab bar when Firefox is maximized |
+| materialFox.maximizedNoTopPadding | Boolean | True | Remove the space above the tab bar when Firefox is maximized |
 | browser.tabs.tabClipWidth | Number | 83 | Replicate Chrome's behaviour for clipped tabs (default is `140`) |
 | security.insecure_connection_text.enabled | Boolean | True | Replicate Chrome's "Not Secure" text on HTTP |
 
