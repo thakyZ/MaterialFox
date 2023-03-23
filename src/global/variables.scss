@@ -140,9 +140,6 @@
   --toolbar-field-fontsize: 14px !important;
 
   --space-above-tabbar: 8px;
-  &[sizemode='maximized'] {
-    --space-above-tabbar: 0px;
-  }
 
   --tab-separator-opacity: 0.35 !important;
   --tab-block-margin: var(--space-above-tabbar) !important;
@@ -187,6 +184,12 @@
     & :is(#urlbar, #searchbar) {
       --toolbarbutton-hover-background: hsl(206, 5%, 26%) !important;
       --toolbarbutton-active-background: hsl(210, 4%, 31%) !important;
+    }
+  }
+
+  @supports -moz-bool-pref('materialFox.maximizedNoTopPadding') {
+    &[sizemode='maximized'] {
+      --space-above-tabbar: 0px;
     }
   }
 }

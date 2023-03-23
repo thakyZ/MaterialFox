@@ -120,10 +120,6 @@
     var(--arrowpanel-menuitem-padding-inline) !important;
   --arrowpanel-menuitem-border-radius: 0px !important;
 }
-:host[sizemode=maximized],
-:root[sizemode=maximized] {
-  --space-above-tabbar: 0px;
-}
 :host[privatebrowsingmode=temporary],
 :root[privatebrowsingmode=temporary] {
   --toolbar-field-background-color: #202124 !important;
@@ -153,6 +149,12 @@
 :root :is(#urlbar, #searchbar) {
     --toolbarbutton-hover-background: hsl(206, 5%, 26%) !important;
     --toolbarbutton-active-background: hsl(210, 4%, 31%) !important;
+  }
+}
+@supports -moz-bool-pref("materialFox.maximizedNoTopPadding") {
+  :host[sizemode=maximized],
+:root[sizemode=maximized] {
+    --space-above-tabbar: 0px;
   }
 }
 
