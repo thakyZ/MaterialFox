@@ -699,6 +699,11 @@
   --input-offset: -1px;
 }
 
+.unified-extensions-item-action-button {
+  // prevent clipping of extension icon badge
+  overflow: visible;
+}
+
 /* 2x */
 @media (min--moz-device-pixel-ratio: 2) {
   #urlbar {
