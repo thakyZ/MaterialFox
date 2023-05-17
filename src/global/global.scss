@@ -1,10 +1,6 @@
 @media (-moz-windows-compositor) {
   @media (-moz-windows-default-theme) {
     :root[tabsintitlebar] {
-      & .titlebar-buttonbox-container {
-        margin-block-start: calc(0px - (var(--space-above-tabbar) + 5px)) !important;
-      }
-
       @media (-moz-windows-accent-color-in-titlebar: 0) {
         &:not(:-moz-lwtheme):not([privatebrowsingmode='temporary']) {
           background-color: #dee1e6 !important;
