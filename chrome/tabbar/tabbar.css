@@ -1,7 +1,3 @@
-:-moz-any(.titlebar-placeholder, .titlebar-spacer)[type=pre-tabs] {
-  width: 0 !important;
-}
-
 @media (-moz-mac-yosemite-theme) {
   #TabsToolbar {
     -moz-appearance: none !important;
@@ -46,6 +42,9 @@
 :-moz-any(.titlebar-placeholder, .titlebar-spacer) {
   border: 0 !important;
   display: -moz-box !important;
+}
+:-moz-any(.titlebar-placeholder, .titlebar-spacer)[type=pre-tabs] {
+  width: 0 !important;
 }
 :-moz-any(.titlebar-placeholder, .titlebar-spacer)[type=post-tabs] {
   width: 48px !important;
@@ -425,7 +424,6 @@
 .scrollbox-clip {
   min-height: var(--tab-height) !important;
 }
-
 .scrollbox-clip > scrollbox {
   max-height: var(--tab-height) !important;
   min-height: var(--tab-height) !important;
