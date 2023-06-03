@@ -631,7 +631,7 @@
 }
 
 .unified-extensions-item-action-button {
-  overflow: visible;
+  overflow: visible !important;
 }
 
 /* 2x */

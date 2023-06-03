@@ -701,7 +701,7 @@
 
 .unified-extensions-item-action-button {
   // prevent clipping of extension icon badge
-  overflow: visible;
+  overflow: visible !important;
 }
 
 /* 2x */
