@@ -114,6 +114,7 @@
   --toolbar-field-hover-background-color: hsl(216, 12%, 92%) !important;
   --toolbar-field-focus-background-color: hsl(0, 0%, 100%) !important;
   --arrowpanel-menuitem-margin: 0 !important;
+  --arrowpanel-menuitem-margin-inline: 0 !important;
   --arrowpanel-menuitem-padding-block: 6px !important;
   --arrowpanel-menuitem-padding-inline: 10px !important;
   --arrowpanel-menuitem-padding: var(--arrowpanel-menuitem-padding-block)

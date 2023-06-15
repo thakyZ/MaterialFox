@@ -68,3 +68,13 @@ menuitem[type='radio'] .menu-iconic-icon {
 image[part='drop-indicator'] {
   background-color: var(--primary-color) !important;
 }
+
+// downloads popup
+#downloadsPanel-blockedSubview,
+#downloadsPanel-mainView {
+  padding-inline: 0 !important;
+}
+
+#downloadsListBox > richlistitem {
+  border-radius: 0 !important;
+}
