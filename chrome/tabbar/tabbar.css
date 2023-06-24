@@ -67,6 +67,8 @@
 #tabbrowser-tabs {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
+  position: relative;
+  overflow: clip;
   /* special case for pinned tabs when overflowing */
   /* clipped tabs */
 }
@@ -75,10 +77,6 @@
 }
 #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned] .tab-background {
   margin: 0 -1px !important;
-}
-#tabbrowser-tabs[overflow] .tabbrowser-tab[pinned] .tab-stack {
-  margin-top: 8px !important;
-  margin-bottom: 0 !important;
 }
 #tabbrowser-tabs[overflow] .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned]) .tab-content::before {
   opacity: 0 !important;
@@ -109,6 +107,10 @@
 }
 #tabbrowser-tabs[hasadjacentnewtabbutton]:not([overflow]) .tabbrowser-tab[last-visible-tab]:not([visuallyselected]):not(:hover):not([multiselected]) .tab-content::after {
   opacity: var(--tab-separator-opacity) !important;
+}
+:root:not([privatebrowsingmode=temporary], [firefoxviewhidden]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs, :root[privatebrowsingmode=temporary]:not([firefoxviewhidden]) :is(toolbarbutton:not(#firefox-view-button),
+toolbarpaletteitem:not(#wrapper-firefox-view-button)) + #tabbrowser-tabs {
+  padding-inline-start: calc(var(--tab-overflow-pinned-tabs-width) + 6px) !important;
 }
 
 .tabbrowser-tab {
