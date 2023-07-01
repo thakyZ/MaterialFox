@@ -139,10 +139,10 @@
 
   --toolbar-field-fontsize: 14px !important;
 
-  --space-above-tabbar: 8px;
+  --mf-space-above-tabbar: 8px;
 
   --tab-separator-opacity: 0.35 !important;
-  --tab-block-margin: var(--space-above-tabbar) !important;
+  --tab-block-margin: var(--mf-space-above-tabbar) !important;
   --tab-top-radius: 8px;
   --tab-bottom-radius: var(--tab-top-radius);
 
@@ -190,16 +190,24 @@
 
   @supports -moz-bool-pref('materialFox.maximizedNoTopPadding') {
     &[sizemode='maximized'] {
-      --space-above-tabbar: 0px;
+      --mf-space-above-tabbar: 0px;
     }
   }
 }
 
 #titlebar,
 #tabbrowser-tabs {
-  --tab-height: 34px !important;
+  // tab background shadow is set by FF
+  --mf-tab-shadow-size: 4px;
+  --mf-tab-margin-top: var(--mf-tab-shadow-size);
+  --mf-tab-height: 32px !important;
+  --mf-tab-height-full: calc(var(--mf-tab-height) + var(--mf-tab-margin-top))
   // --tab-min-height is used by FF
-  --tab-min-height: var(--tab-height);
+  --tab-min-height: var(--mf-tab-height-full);
+
+  :is(:host, :root)[sizemode='maximized'] & {
+    --mf-tab-margin-top: 0;
+  }
 }
 
 @supports -moz-bool-pref('materialFox.reduceTabOverflow') {

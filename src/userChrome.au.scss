@@ -20,6 +20,13 @@
   background-repeat: no-repeat;
 }
 
-.tabbrowser-arrowscrollbox::part(scrollbox) {
-  padding-inline-start: var(--tab-bottom-radius);
+#tabbrowser-arrowscrollbox {
+  &::part(scrollbox) {
+    padding-inline-start: var(--tab-bottom-radius);
+  }
+
+  &::part(scrollbutton-down),
+  &::part(scrollbutton-up) {
+    margin-block-start: var(--mf-tab-margin-top) !important;
+  }
 }

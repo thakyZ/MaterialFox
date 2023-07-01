@@ -22,7 +22,7 @@
   }
 }
 
-#navigator-toolbox :is(.toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton)),
+#navigator-toolbox :where(.toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton)),
 .close-icon.findbar-closebutton,
 /* no ::part workaround - may have side effects */
 #scrollbutton-up[part="scrollbutton-up"]:not(.menupopup-scrollbutton),
@@ -44,8 +44,6 @@
   background-clip: padding-box !important;
 
   font-size: 12px !important;
-  padding: 0 !important;
-  margin: 0 !important;
 
   &[disabled] {
     opacity: 0.42 !important;
@@ -59,6 +57,12 @@
     fill-opacity: 0.04 !important;
     background-size: 120% !important;
   }
+}
+
+#navigator-toolbox :where(.toolbarbutton-1, toolbarbutton.bookmark-item:not(.subviewbutton)),
+.close-icon.findbar-closebutton {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 #navigator-toolbox :-moz-any(.toolbarbutton-1, .scrollbutton-up, .scrollbutton-down),

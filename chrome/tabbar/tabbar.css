@@ -61,7 +61,7 @@
 }
 
 #TabsToolbar-customization-target {
-  margin-block-start: var(--space-above-tabbar);
+  margin-block-start: var(--mf-space-above-tabbar);
 }
 
 #tabbrowser-tabs {
@@ -114,12 +114,14 @@ toolbarpaletteitem:not(#wrapper-firefox-view-button)) + #tabbrowser-tabs {
 }
 
 .tabbrowser-tab {
-  max-height: var(--tab-height) !important;
+  max-height: var(--mf-tab-height) !important;
+  min-height: var(--mf-tab-height) !important;
   overflow: visible !important;
   font-size: 12px !important;
   background: 0 !important;
   border: 0 !important;
   padding: 0 !important;
+  margin-block-start: var(--mf-tab-margin-top) !important;
   /* tab background color */
   --tab-opacity: 0;
   --tab-bgcolor: #000;
@@ -424,11 +426,17 @@ toolbarpaletteitem:not(#wrapper-firefox-view-button)) + #tabbrowser-tabs {
 }
 
 .scrollbox-clip {
-  min-height: var(--tab-height) !important;
+  min-height: var(--mf-tab-height-full) !important;
 }
 .scrollbox-clip > scrollbox {
-  max-height: var(--tab-height) !important;
-  min-height: var(--tab-height) !important;
+  max-height: var(--mf-tab-height-full) !important;
+  min-height: var(--mf-tab-height-full) !important;
+}
+
+#alltabs-button,
+#tabbrowser-tabs #tabs-newtab-button,
+#TabsToolbar #new-tab-button {
+  margin-block-start: var(--mf-tab-margin-top) !important;
 }
 
 /* < 72 */

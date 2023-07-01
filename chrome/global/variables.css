@@ -105,9 +105,9 @@
   --toolbar-non-lwt-bgcolor: var(--toolbar-bgcolor) !important;
   --toolbar-non-lwt-textcolor: var(--toolbar-color) !important;
   --toolbar-field-fontsize: 14px !important;
-  --space-above-tabbar: 8px;
+  --mf-space-above-tabbar: 8px;
   --tab-separator-opacity: 0.35 !important;
-  --tab-block-margin: var(--space-above-tabbar) !important;
+  --tab-block-margin: var(--mf-space-above-tabbar) !important;
   --tab-top-radius: 8px;
   --tab-bottom-radius: var(--tab-top-radius);
   --toolbar-field-background-color: hsl(200, 12%, 95%) !important;
@@ -155,14 +155,22 @@
 @supports -moz-bool-pref("materialFox.maximizedNoTopPadding") {
   :host[sizemode=maximized],
 :root[sizemode=maximized] {
-    --space-above-tabbar: 0px;
+    --mf-space-above-tabbar: 0px;
   }
 }
 
 #titlebar,
 #tabbrowser-tabs {
-  --tab-height: 34px !important;
-  --tab-min-height: var(--tab-height);
+  --mf-tab-shadow-size: 4px;
+  --mf-tab-margin-top: var(--mf-tab-shadow-size);
+  --mf-tab-height: 32px !important;
+  --mf-tab-height-full: calc(var(--mf-tab-height) + var(--mf-tab-margin-top))
+  // --tab-min-height is used by FF
+  --tab-min-height: var(--mf-tab-height-full);
+}
+:is(:host, :root)[sizemode=maximized] #titlebar,
+:is(:host, :root)[sizemode=maximized] #tabbrowser-tabs {
+  --mf-tab-margin-top: 0;
 }
 
 @supports -moz-bool-pref("materialFox.reduceTabOverflow") {
