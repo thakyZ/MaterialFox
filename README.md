@@ -2,7 +2,7 @@
 
 _A Material Design-inspired userChrome.css theme for Firefox_
 
-![Preview](https://user-images.githubusercontent.com/5405629/45172944-21d91900-b24a-11e8-8bc5-03814121b0de.png)
+![Preview](./media/material-fox.webp)
 
 ## What this does
 
@@ -24,6 +24,7 @@ You might want to set the following preferences in `about:config`.
 | - | - | - | - |
 | materialFox.maximizedNoTopPadding | Boolean | True | Remove the space above the tab bar when Firefox is maximized |
 | browser.tabs.tabClipWidth | Number | 83 | Replicate Chrome's behaviour for clipped tabs (default is `140`) |
+| browser.uidensity | Number | 1 | Enable compact density in "Customize toolbar ..." |
 | security.insecure_connection_text.enabled | Boolean | True | Replicate Chrome's "Not Secure" text on HTTP |
 
 ## Development
@@ -40,7 +41,12 @@ This theme uses SCSS to generate the CSS files for Firefox.
 
 ## Please note
 
-- Linux is no longer officially supported but you can give it a try – if you'd like to work on it feel free to make a PR.
-- Some customization settings may no longer work (such as compact/touch density).
-- Some custom themes may clash with the address bar.
-- Some themes using transparency might not work.
+- This is a fork of the original MaterialFox by muckSponge. I've made some changes to the theme to suit my own preferences and I will update this theme as long as I use it myself but I cannot guarantee that it will work with your setup. My configuration is
+
+  - Windows, macOS
+  - Dark theme
+  - Compact density
+
+  Despite that I am willing to make changes to suit other configurations if I find the time and I am open to pull requests that do so.
+
+- Some custom themes (e.g. Firefox Color) may be incompatible.
