@@ -201,7 +201,7 @@
   --mf-tab-shadow-size: 4px;
   --mf-tab-margin-top: var(--mf-tab-shadow-size);
   --mf-tab-height: 32px !important;
-  --mf-tab-height-full: calc(var(--mf-tab-height) + var(--mf-tab-margin-top))
+  --mf-tab-height-full: calc(var(--mf-tab-height) + var(--mf-tab-margin-top));
   // --tab-min-height is used by FF
   --tab-min-height: var(--mf-tab-height-full);
 
