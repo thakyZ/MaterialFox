@@ -1,0 +1,47 @@
+name: Bug Report
+description: Create a report to help us improve
+title: '[BUG] '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: checkboxes
+    attributes:
+      label: Self check
+      description: This helps to reduce duplicates and makes it easier for us to find and fix the problem.
+      options:
+        - label: I have searched the existing issues
+        - label: I followed the installations instructions in the Readme
+        - label: I have tested the latest version of the project
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen? Screenshots are welcome!
+      placeholder: Describe what you see!
+      value: "Something doesn't look right..."
+    validations:
+      required: true
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: What operating system are you seeing the problem on?
+      multiple: true
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+  - type: input
+    id: ff-version
+    attributes:
+      label: Firefox version
+      description: Which version of Firefox are you seeing this problem on?
+      placeholder: 110
+    validations:
+      required: true
