@@ -42,6 +42,6 @@ body:
     attributes:
       label: Firefox version
       description: Which version of Firefox are you seeing this problem on?
-      placeholder: 110
+      placeholder: '110'
     validations:
       required: true
