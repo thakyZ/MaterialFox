@@ -5,6 +5,7 @@
 content userchromejs ./
 # Where your scripts exist and are loaded from.
 content userscripts ../JS/
+skin userstyles classic/1.0 ../CSS/
 # Where icons and content stylesheets and other stuff exist.
 content userchrome ../resources/
 
