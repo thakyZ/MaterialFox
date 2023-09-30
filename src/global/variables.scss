@@ -203,7 +203,7 @@
   --mf-tab-height: 32px !important;
   --mf-tab-height-full: calc(var(--mf-tab-height) + var(--mf-tab-margin-top));
   // --tab-min-height is used by FF
-  --tab-min-height: var(--mf-tab-height-full);
+  --tab-min-height: var(--mf-tab-height);
 
   :is(:host, :root)[sizemode='maximized'] & {
     --mf-tab-margin-top: 0;
