@@ -6,6 +6,11 @@
   list-style-image: url(./folder-dark.svg) !important;
 }
 
+#PersonalToolbar .toolbarbutton-1 {
+  // overwrite default 4px
+  --toolbarbutton-inner-padding: 6px !important;
+}
+
 #PlacesToolbar {
   & .bookmark-item[container] {
     list-style-image: url(./folder.svg) !important;
