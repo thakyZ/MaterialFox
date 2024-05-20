@@ -13,7 +13,7 @@ This is a userChrome.css theme, which means you must manually add it to your Fir
 ## Installation
 
 1. This theme depends on [uc.css.js](https://github.com/aminomancer/uc.css.js) and [fx-autoconfig](https://github.com/MrOtherGuy/fx-autoconfig) in order to use the `part` selector in author stylesheets. Please follow their installation instructions ([here](https://github.com/MrOtherGuy/fx-autoconfig#setting-up-configjs-from-program-folder)) first.
-1. Copy the chrome folder and user.js file into your Firefox profile directory. To find your profile directory, go to about:support or about:profiles.
+1. Copy the **chrome** folder and **user.js** file into your Firefox profile directory. To find your profile directory, go to about:support or about:profiles.
 1. See [Recommended settings](#recommended-settings) if you'd prefer a more Chrome-like experience.
 1. Restart Firefox.
 
