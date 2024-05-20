@@ -10,15 +10,8 @@
   --toolbarbutton-inner-padding: 6px !important;
 }
 
-#PlacesToolbar {
-  /* remove space between bookmark folder and popup */
-}
 #PlacesToolbar .bookmark-item[container] {
   list-style-image: url(./folder.svg) !important;
-}
-#PlacesToolbar menupopup {
-  margin-block-start: -4px !important;
-  margin-inline-start: 2px;
 }
 #PlacesToolbar #PlacesToolbarItems toolbarbutton.bookmark-item:not(.subviewbutton) {
   border-radius: 8px !important;

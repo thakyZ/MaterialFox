@@ -30,3 +30,10 @@
     margin-block-start: var(--mf-tab-margin-top) !important;
   }
 }
+
+menupopup {
+  &::part(content) {
+    padding-inline: 0 !important;
+    --panel-background: var(--arrowpanel-background);
+  }
+}
