@@ -1,5 +1,16 @@
 @import './contextMenuRemovals.css';
 
+menupopup,
+panel {
+  // overwrite default .2
+  --panel-shadow: 0 0 var(--panel-shadow-margin) hsla(0, 0%, 0%, 0.4) !important;
+
+  // overwrite default 4px
+  @media (-moz-platform: linux), (-moz-platform: windows) {
+    --panel-shadow-margin: 8px !important;
+  }
+}
+
 menupopup {
   appearance: none !important;
   color: var(--arrowpanel-color) !important;
@@ -13,6 +24,18 @@ menupopup {
       var(--menu-background-color)
     );
   }
+
+  & > menu > menupopup {
+    // position submenu at the same height as the parent menu entry (overwrite default +1px)
+    margin-top: calc(
+      -1 * (var(--panel-shadow-margin) + var(--panel-padding-block) + 0px)
+    ) !important;
+  }
+}
+
+menu,
+menuitem {
+  --panel-border-radius: 0 !important;
 }
 
 menuitem,
@@ -67,4 +90,14 @@ menuitem[type='radio'] .menu-iconic-icon {
 
 image[part='drop-indicator'] {
   background-color: var(--primary-color) !important;
+}
+
+// downloads popup
+#downloadsPanel-blockedSubview,
+#downloadsPanel-mainView {
+  padding-inline: 0 !important;
+}
+
+#downloadsListBox > richlistitem {
+  border-radius: 0 !important;
 }

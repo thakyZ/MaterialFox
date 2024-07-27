@@ -31,14 +31,14 @@
 
 /* don't bother with sidebar in light mode */
 /* dark mode */
-:root:-moz-lwtheme-brighttext,
+:root[lwtheme-brighttext],
 :root[privatebrowsingmode=temporary] {
   /* accentcolor */
   --lwt-accent-color: #202124 !important;
   /* textcolor */
   --lwt-text-color: #9ba0a5 !important;
   /* toolbar */
-  --toolbar-bgcolor: #333639 !important;
+  --toolbar-bgcolor: hsl(0, 0%, 20%) !important;
   /* toolbar_text */
   --toolbar-color: #fff !important;
   /* toolbar_bottom_separator */
@@ -71,22 +71,25 @@
   --lwt-brighttext-url-color: var(--primary-color) !important;
 }
 
-:-moz-any(#sidebar-box, #sidebar)[style*="--sidebar-background-color:rgb(56, 56, 61);"] {
+:is(#sidebar-box, #sidebar)[style*="--sidebar-background-color:rgb(56, 56, 61);"] {
   /* sidebar */
   --sidebar-background-color: #333639 !important;
   /* sidebar_text */
   --sidebar-text-color: #f1f3ee !important;
 }
 
-:-moz-any(.sidebar-panel, body)[style*="--lwt-sidebar-background-color:rgb(56, 56, 61);"] {
+:is(.sidebar-panel, body)[style*="--lwt-sidebar-background-color:rgb(56, 56, 61);"] {
   /* sidebar */
   --lwt-sidebar-background-color: #333639 !important;
   /* sidebar_text */
   --lwt-sidebar-text-color: #f1f3ee !important;
 }
 
+:host,
 :root {
-  --primary-color: hsl(219, 90%, 62%);
+  --primary-color: hsl(219, 72%, 53%);
+  --primary-color-lighter: hsl(219, 75%, 60%);
+  --primary-color-very-light: hsl(219, 80%, 65%);
   --primary-text-color: white;
   --ease-in: cubic-bezier(0.4, 0, 1, 1);
   --ease-out: cubic-bezier(0, 0, 0.2, 1);
@@ -102,44 +105,74 @@
   --toolbar-non-lwt-bgcolor: var(--toolbar-bgcolor) !important;
   --toolbar-non-lwt-textcolor: var(--toolbar-color) !important;
   --toolbar-field-fontsize: 14px !important;
-  --space-above-tabbar: 0;
+  --mf-space-above-tabbar: 8px;
   --tab-separator-opacity: 0.35 !important;
-  --tab-block-margin: var(--space-above-tabbar) !important;
+  --tab-block-margin: var(--mf-space-above-tabbar) !important;
+  --tab-top-radius: 8px;
+  --tab-bottom-radius: var(--tab-top-radius);
   --toolbar-field-background-color: hsl(200, 12%, 95%) !important;
   --toolbar-field-hover-background-color: hsl(216, 12%, 92%) !important;
   --toolbar-field-focus-background-color: hsl(0, 0%, 100%) !important;
   --arrowpanel-menuitem-margin: 0 !important;
+  --arrowpanel-menuitem-margin-inline: 0 !important;
   --arrowpanel-menuitem-padding-block: 6px !important;
   --arrowpanel-menuitem-padding-inline: 10px !important;
   --arrowpanel-menuitem-padding: var(--arrowpanel-menuitem-padding-block)
     var(--arrowpanel-menuitem-padding-inline) !important;
   --arrowpanel-menuitem-border-radius: 0px !important;
 }
-:root[sizemode=maximized] {
-  --space-above-tabbar: 0;
-}
-:root:-moz-any(:-moz-lwtheme-brighttext, [privatebrowsingmode=temporary]) {
+:host[privatebrowsingmode=temporary],
+:root[privatebrowsingmode=temporary] {
   --toolbar-field-background-color: #202124 !important;
   --toolbar-field-hover-background-color: #292a2d !important;
   --toolbar-field-focus-background-color: #202124 !important;
 }
+:host[privatebrowsingmode=temporary] :is(#urlbar, #searchbar),
+:root[privatebrowsingmode=temporary] :is(#urlbar, #searchbar) {
+  --toolbarbutton-hover-background: hsl(206, 5%, 26%) !important;
+  --toolbarbutton-active-background: hsl(210, 4%, 31%) !important;
+}
+:host:not(:-moz-lwtheme):not([privatebrowsingmode=temporary]),
 :root:not(:-moz-lwtheme):not([privatebrowsingmode=temporary]) {
   --toolbar-bgcolor: hsl(0, 0%, 100%) !important;
   --toolbar-color: hsl(213, 5%, 39%) !important;
   --toolbox-border-bottom-color: hsl(0, 0%, 70%) !important;
 }
-:root:-moz-any([privatebrowsingmode=temporary], :-moz-lwtheme-brighttext) :-moz-any(#urlbar, #searchbar) {
-  --toolbarbutton-hover-background: hsl(206, 5%, 26%) !important;
-  --toolbarbutton-active-background: hsl(210, 4%, 31%) !important;
+@media (prefers-color-scheme: dark) {
+  :host,
+:root {
+    --toolbar-field-background-color: #202124 !important;
+    --toolbar-field-hover-background-color: #292a2d !important;
+    --toolbar-field-focus-background-color: #202124 !important;
+    --focus-outline-color: var(--primary-color) !important;
+  }
+  :host :is(#urlbar, #searchbar),
+:root :is(#urlbar, #searchbar) {
+    --toolbarbutton-hover-background: hsl(206, 5%, 26%) !important;
+    --toolbarbutton-active-background: hsl(210, 4%, 31%) !important;
+  }
+}
+@media (-moz-bool-pref: 'materialFox.maximizedNoTopPadding') {
+  :host[sizemode=maximized],
+:root[sizemode=maximized] {
+    --mf-space-above-tabbar: 0px;
+  }
 }
 
 #titlebar,
 #tabbrowser-tabs {
-  --tab-height: 32px !important;
-  --tab-min-height: var(--tab-height);
+  --mf-tab-shadow-size: 4px;
+  --mf-tab-margin-top: var(--mf-tab-shadow-size);
+  --mf-tab-height: 32px !important;
+  --mf-tab-height-full: calc(var(--mf-tab-height) + var(--mf-tab-margin-top));
+  --tab-min-height: var(--mf-tab-height);
+}
+:is(:host, :root)[sizemode=maximized] #titlebar,
+:is(:host, :root)[sizemode=maximized] #tabbrowser-tabs {
+  --mf-tab-margin-top: 0;
 }
 
-@supports -moz-bool-pref("materialFox.reduceTabOverflow") {
+@media (-moz-bool-pref: 'materialFox.reduceTabOverflow') {
   #tabbrowser-tabs {
     --tab-min-width: 32px !important;
   }
@@ -178,9 +211,20 @@
 }
 
 /* special case for urlbar buttons */
-:-moz-any(#urlbar, #searchbar) {
+:is(#urlbar, #searchbar) {
   --toolbarbutton-hover-background: hsl(210, 5%, 85%) !important;
   --toolbarbutton-active-background: hsl(210, 4%, 80%) !important;
+}
+
+@-moz-document url("chrome://browser/content/places/bookmarkProperties.xhtml"), url("chrome://browser/content/places/bookmarkProperties2.xhtml") {
+  :root[dialogroot], :root[dialogroot] dialog {
+    --in-content-primary-button-background: var(--primary-color) !important;
+    --in-content-primary-button-text-color: var(--primary-text-color) !important;
+    --in-content-primary-button-background-hover: var(--primary-color-lighter) !important;
+    --in-content-primary-button-text-color-hover: var(--primary-text-color) !important;
+    --in-content-primary-button-background-active: var(--primary-color-very-light) !important;
+    --in-content-primary-button-text-color-active: var(--primary-text-color) !important;
+  }
 }
 
 /*# sourceMappingURL=variables.css.map */

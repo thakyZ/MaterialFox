@@ -1,0 +1,13 @@
+# Replace some of Firefox's internal files with our own versions. In order of startup priority.
+
+# Instantiate fx-autoconfig's main directories.
+# Where this file and the script loader exist.
+content userchromejs ./
+# Where your scripts exist and are loaded from.
+content userscripts ../JS/
+skin userstyles classic/1.0 ../CSS/
+# Where icons and content stylesheets and other stuff exist.
+content userchrome ../resources/
+
+# Override the built-in styles for arrowscrollboxes, mainly to replace scrollbuttons with scrollbars.
+override chrome://global/skin/arrowscrollbox.css ../resources/layout/arrowscrollbox.css

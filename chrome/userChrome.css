@@ -6,6 +6,7 @@
 @import 'personalbar/personalbar.css';
 @import 'popup/popup.css';
 @import 'urlbar/urlbar.css';
+@import 'urlbar/urlbarView.css';
 @import 'findbar/findbar.css';
 @import 'dialog/dialog.css';
 @import 'forms/forms.css';

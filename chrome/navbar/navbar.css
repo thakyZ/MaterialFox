@@ -4,6 +4,9 @@
   padding-inline: 5px 6px !important;
   background-color: var(--toolbar-bgcolor) !important;
 }
+#nav-bar[urlbar-exceeds-toolbar-bounds] #urlbar-container {
+  align-items: start !important;
+}
 
 #reload-button[disabled]:not(:-moz-window-inactive) > .toolbarbutton-icon {
   opacity: 1 !important;
